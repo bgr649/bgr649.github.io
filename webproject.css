@@ -25,15 +25,27 @@ html {
 a {
     color: white;
 }
-/*tekstisiällön ulkonäköä ja paikka*/
+/*tekstisiällön ulkonäköä ja paikka, opacity läpinäkyvä taustatekstille*/
 article {
     position: fixed;
     text-align: center;
-    padding: 20px;
-    width: 100%;
-    color: white;
+    width: 60%;
+    right: 20%;
     background-color: black;
+    background-color: lightslategray;
+    opacity:0.8;
+    font-size:15px;
+    padding:7px;
+    box-sizing:content-box;
+    color:white;
+    font-weight:bold;
 
+}
+ul {
+    columns: 3;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+  
 }
 /*määritellään alareunan paikka, ulkonäköä ja  tekstin sijaintia jne*/
 footer {

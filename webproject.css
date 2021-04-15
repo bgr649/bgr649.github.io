@@ -33,19 +33,19 @@ article {
     right: 20%;
     background-color: black;
     background-color: lightslategray;
-    opacity:0.8;
-    font-size:15px;
-    padding:7px;
-    box-sizing:content-box;
-    color:white;
-    font-weight:bold;
+    opacity: 0.8;
+    font-size: 15px;
+    padding: 7px;
+    box-sizing: content-box;
+    color: white;
+    font-weight: bold;
 
 }
 ul {
     columns: 3;
     -webkit-columns: 2;
     -moz-columns: 2;
-  
+
 }
 /*määritellään alareunan paikka, ulkonäköä ja  tekstin sijaintia jne*/
 footer {

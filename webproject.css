@@ -43,8 +43,7 @@ article {
 }
 ul {
     columns: 3;
-    -webkit-columns: 2;
-    -moz-columns: 2;
+
 
 }
 /*määritellään alareunan paikka, ulkonäköä ja  tekstin sijaintia jne*/

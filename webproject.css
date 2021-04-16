@@ -29,8 +29,6 @@ a {
 article {
     position: fixed;
     text-align: center;
-    width: 60%;
-    right: 20%;
     background-color: black;
     background-color: lightslategray;
     opacity: 0.8;

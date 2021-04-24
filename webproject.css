@@ -69,5 +69,6 @@ footer {
     div {
         width: 100%;
         height: auto;
+        overflow: scroll;
     }
 }

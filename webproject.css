@@ -7,7 +7,9 @@ html {
     background-position-x: center;
     background-size: contain;
     background-color: black;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial;
+   
+    
 
 }
 /*Tässä määritellään ylöpalkin laatikoiden paikka ja koko jne*/
@@ -27,7 +29,10 @@ a {
 }
 /*tekstisiällön ulkonäköä ja paikka, opacity läpinäkyvä taustatekstille*/
 article {
-    position: fixed;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: absolute;
+    height: 60%;
     text-align: center;
     width: 60%;
     right: 20%;
@@ -40,7 +45,6 @@ article {
     box-sizing: content-box;
     color: white;
     font-weight: bold;
-    overflow: scroll;
 
 }
 ul {
@@ -65,18 +69,9 @@ footer {
 @media (max-width: 200px) {
     article,
     section,
-    ul,
-    div {
-        width: 100%;
-        height: 60%;
-        @media (max-width: 200px) {
-    article,
-    section,
     div {
         width: 100%;
         height: auto;
         
-       
-
     }
 }

@@ -40,6 +40,7 @@ article {
     box-sizing: content-box;
     color: white;
     font-weight: bold;
+    overflow: scroll;
 
 }
 ul {

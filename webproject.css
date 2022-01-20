@@ -24,18 +24,12 @@ html {
 a {
     color: black;
 }
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
 .dropbtn {
-  background-color: grey;
+  background-color: #04AA6D;
   color: white;
   padding: 16px;
   font-size: 16px;
   border: none;
-  cursor: pointer;
 }
 
 .dropdown {
@@ -46,7 +40,7 @@ a {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: grey;
+  background-color: #f1f1f1;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -59,14 +53,11 @@ a {
   display: block;
 }
 
-.dropdown-content a:hover {background-color: grey}
+.dropdown-content a:hover {background-color: #ddd;}
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+.dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {
-  background-color: grey;
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
 }
 /*tekstisiällön ulkonäköä ja paikka, opacity läpinäkyvä taustatekstille*/
 article {

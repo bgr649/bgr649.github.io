@@ -90,7 +90,7 @@ article {
 /*määritellään alareunan paikka, ulkonäköä ja  tekstin sijaintia jne*/
 footer {
     background-color: black;
-    position: center;
+    position: fixed;
     width: 100%;
     left: 0;
     bottom: 0;

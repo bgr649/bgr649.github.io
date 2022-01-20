@@ -53,13 +53,11 @@ article {
     width: 60%;
     right: 20%;
     left: 20%;
-    background-color: black;
-    background-color: lightslategray;
-    opacity: 0.8;
+    background-color: grey;
     font-size: 15px;
     padding: 7px;
     box-sizing: content-box;
-    color: white;
+    color: black;
     font-weight: bold;
 
 }

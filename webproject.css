@@ -22,7 +22,25 @@ html {
 }
 /*Linkin väri*/
 a {
-    color: white;
+    color: black;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: lightslategray;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 /*tekstisiällön ulkonäköä ja paikka, opacity läpinäkyvä taustatekstille*/
 article {
@@ -44,11 +62,7 @@ article {
     font-weight: bold;
 
 }
-ul {
-    columns: 3;
-    list-style-type: none;
 
-}
 /*määritellään alareunan paikka, ulkonäköä ja  tekstin sijaintia jne*/
 footer {
     background-color: black;
@@ -60,26 +74,6 @@ footer {
     text-align: center;
     color: white;
 }
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: lightslategray;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 12px 16px;
-  z-index: 1;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
 
 /* Tämän löysin w3schoolsista, kun etsin miten tehdä ruutuun mukautuvat sivut, Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens, */
 @media (max-width: 200px) {

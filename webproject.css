@@ -44,6 +44,7 @@ a {
 }
 /*tekstisiällön ulkonäköä ja paikka, opacity läpinäkyvä taustatekstille*/
 article {
+    article {
     overflow-y: auto;
     overflow-x: hidden;
     position: absolute;
@@ -52,10 +53,12 @@ article {
     width: 60%;
     right: 20%;
     left: 20%;
-   
+    background-color: black;
+    background-color: lightslategray;
+    opacity: 0.8;
     font-size: 15px;
     padding: 7px;
-  
+    box-sizing: content-box;
     color: white;
     font-weight: bold;
 
@@ -64,7 +67,7 @@ article {
 /*määritellään alareunan paikka, ulkonäköä ja  tekstin sijaintia jne*/
 footer {
     background-color: black;
-    position: fixed;
+    position: center;
     width: 100%;
     left: 0;
     bottom: 0;

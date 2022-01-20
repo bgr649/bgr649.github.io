@@ -11,7 +11,6 @@ html {
 }
 /*Tässä määritellään ylöpalkin laatikoiden paikka ja koko jne*/
 .yla {
-    {
   overflow: hidden;
   background-color: #333;
 }

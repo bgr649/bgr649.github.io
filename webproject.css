@@ -61,6 +61,25 @@ footer {
     color: white;
 }
 
+.dropdowndemo {
+position:fixed;
+display: block;
+}
+
+.dropdownlist-content {
+display: none;
+position: absolute;
+background-color: greenyellow;
+min-width: 120px;
+z-index: 1;
+}
+
+.dropdownlist-content a {
+color: darkblue;
+padding: 14px 18px;
+display: block;
+}
+
 /* Tämän löysin w3schoolsista, kun etsin miten tehdä ruutuun mukautuvat sivut, Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens, */
 @media (max-width: 200px) {
     article,

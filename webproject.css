@@ -1,12 +1,11 @@
 /*tässä määritellään taustakuvan koko ja ja paikka sivulla, fontit*/
 body,
 html {
-    background-image: url("taustakimi.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position-x: center;
     background-size: contain;
-    background-color: black;
+    background-color: grey;
     font-family: Arial;
 
 }

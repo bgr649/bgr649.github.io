@@ -70,7 +70,6 @@ a {
 }
 /*tekstisiällön ulkonäköä ja paikka, opacity läpinäkyvä taustatekstille*/
 article {
-    article {
     overflow-y: auto;
     overflow-x: hidden;
     position: absolute;

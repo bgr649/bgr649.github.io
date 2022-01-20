@@ -13,10 +13,6 @@
   text-decoration: none;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
-  background-color: red;
-}
-
 .dropbtn {
   background-color: #04AA6D;
   color: white;

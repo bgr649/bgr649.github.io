@@ -9,12 +9,12 @@ article {
     left: 20%;
     up: 20%;
     background-color: black;
-    background-color: lightslategray;
+    background-color: #BDBDBD;
     opacity: 0.8;
     font-size: 15px;
     padding: 7px;
     box-sizing: content-box;
-    color: white;
+    color: black;
     font-weight: bold;
 }
 

@@ -13,7 +13,6 @@
     <body>
         <div class="navbar">
             <a href="index.html">Etusivu</a>
-            <a href="#news">JOTAIN</a>
             <div class="dropdown">
                 <button class="dropbtn">Linux palvelimet</button>
                 <div class="dropdown-content">

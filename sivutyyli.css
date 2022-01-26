@@ -2,6 +2,8 @@ article {
     background-color: grey;
     text-align: left;
     font-family: Arial;
+    overflow-y: auto;
+    overflow-x: hidden;
     
 }
 

@@ -1,0 +1,264 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title>Ohje harjoitustöiden laatimiseen HAAGA-HELIAssa (alle 5-sivuiset tekstit)</title>
+	<meta name="generator" content="LibreOffice 7.2.5.2.0 (Linux)"/>
+	<meta name="author" content="Sirke Lohtaja"/>
+	<meta name="created" content="2022-01-21T13:48:00"/>
+	<meta name="changedby" content="Nyman Niko"/>
+	<meta name="changed" content="2022-01-21T13:52:00"/>
+	<meta name="AppVersion" content="16.0000"/>
+	<meta name="Company" content="HAAGA-HELIA ammattikorkeakoulu"/>
+	<meta name="ContentTypeId" content="0x010100EADB1B5F7E555C4BB0ED97E3E47458C3"/>
+	<meta name="Order" content="100.000000000000"/>
+	<meta name="PublishingExpirationDate" content=""/>
+	<meta name="PublishingStartDate" content=""/>
+	<meta name="TemplateUrl" content=""/>
+	<meta name="display_urn:schemas-microsoft-com:office:office#Author" content="Huovinen Suvi"/>
+	<meta name="display_urn:schemas-microsoft-com:office:office#Editor" content="Huovinen Suvi"/>
+	<meta name="xd_ProgID" content=""/>
+	<meta name="xd_Signature" content=""/>
+	<style type="text/css">
+		@page { size: 21cm 29.7cm; margin-left: 2cm; margin-right: 1.5cm; margin-top: 1cm; margin-bottom: 1cm }
+		p { line-height: 115%; text-align: left; orphans: 2; widows: 2; margin-left: 4.6cm; text-indent: -4.6cm; margin-bottom: 0.25cm; direction: ltr; background: transparent }
+		p.western { font-family: "Garamond", serif; font-size: 12pt }
+		p.cjk { font-size: 12pt }
+		p.ctl { font-size: 11pt }
+		a:link { color: #0563c1; text-decoration: underline }
+	</style>
+</head>
+<body lang="fi-FI" link="#0563c1" vlink="#800000" dir="ltr">
+<div title="header"><p class="western" style="line-height: 100%; margin-bottom: 0cm">
+	<font face="Arial, serif"><font size="2" style="font-size: 11pt"><span lang="en-US">Niko
+	Nyman			</span></font></font><font face="Arial, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><b>Raportti			</b></span></font></font><font face="Arial, serif"><font size="2" style="font-size: 11pt"><sdfield type=PAGE subtype=RANDOM format=PAGE>2</sdfield></font></font><font face="Arial, serif"><font size="2" style="font-size: 11pt"><span lang="en-US">
+	(</span></font></font><font face="Arial, serif"><font size="2" style="font-size: 11pt"><sdfield type=DOCSTAT subtype=PAGE format=PAGE>2</sdfield></font></font><font face="Arial, serif"><font size="2" style="font-size: 11pt"><span lang="en-US">)
+				</span></font></font><font face="Arial, serif"><font size="2" style="font-size: 11pt"><span lang="en-US"><b>		</b></span></font></font></p>
+	<p class="western" style="line-height: 100%; margin-bottom: 0cm"><font face="Arial, serif"><font size="2" style="font-size: 11pt"><span lang="en-US">Haaga-Helia
+	University of Applied Sciences	21.1.2022</span></font></font></p>
+	<p class="western" style="line-height: 100%; margin-bottom: 0cm"><font face="Arial, serif"><font size="2" style="font-size: 11pt"><span lang="en-US">ICT4TN021-3018</span></font></font></p>
+	<p lang="en-US" class="western" style="line-height: 100%; margin-left: 0cm; text-indent: 0cm; margin-bottom: 0cm">
+	<br/>
+
+	</p>
+</div><p class="western" style="line-height: 100%; margin-bottom: 0cm">
+<font face="Arial, serif"><font size="2" style="font-size: 11pt"><b>H1(a)</b></font></font></p>
+<p class="western" style="line-height: 100%; margin-left: 0cm; text-indent: 0cm; margin-bottom: 0cm">
+<br/>
+
+</p>
+<p class="western" style="line-height: 100%; margin-left: 0cm; text-indent: 0cm; margin-bottom: 0cm">
+<font face="Arial, serif"><font size="2" style="font-size: 11pt">Tehtävänäni
+oli asentaa Linux käyttöjärjestelmä joko virtuaalikoneelle tai
+suoraan koneen rautaan. Päätin asentaa Linuxin vanhan koneeni
+Windowsin tilalle. Tietokoneena käytin Huawei Matebook AMD Ryzen 5
+prosessorilla ja vanhana käyttöjärjestelmänä Windows 10. Uudeksi
+käyttöjärjestelmäksi valikoitui Kali Linux.</font></font></p>
+<p class="western" style="line-height: 100%; margin-left: 0cm; text-indent: 0cm; margin-bottom: 0cm">
+<br/>
+
+</p>
+<p class="western" style="line-height: 100%; margin-bottom: 0cm"><font face="Arial, serif"><font size="2" style="font-size: 11pt"><b>Käynnistyslevyn
+luonti</b></font></font></p>
+<p class="western" style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p class="western" style="line-height: 100%; margin-bottom: 0cm"><font face="Arial, serif"><font size="2" style="font-size: 11pt">Käynnistyslevyä
+varten minulla oli tyhjä SanDisk Cruzer Blade 8GB muistitikku.</font></font></p>
+<p class="western" style="line-height: 100%; margin-left: 0cm; text-indent: 0cm; margin-bottom: 0cm">
+<br/>
+
+</p>
+<p class="western" style="line-height: 100%; margin-left: 0cm; text-indent: 0cm; margin-bottom: 0cm">
+<font face="Arial, serif"><font size="2" style="font-size: 11pt">Latasin
+käyttöjärjestelmätiedoston osoitteesta
+</font></font><a href="https://www.kali.org/get-kali/">https://www.kali.org/get-kali/</a><font face="Arial, serif"><font size="2" style="font-size: 11pt">.
+Valitsin Bare Metal -vaihtoehdon ja sen alta 64-bit Installerin.
+Tiedosto oli 2.9Gt ja tiedoston lataamiseen meni 30–40 minuuttia.
+Käytössäni oli 10Mbs nopea taloyhtiön nettiliittymä. Latasin ja
+asensin myös BalenaEtcherin, joka on avoimen lähdekoodin ohjelma,
+jolla USB-muistitikku muutetaan ”käynnistyslevyksi”. Etcherin
+latasin osoitteesta </font></font><font color="#0563c1"><u><a href="https://www.balena.io/etcher/"><font face="Arial, serif"><font size="2" style="font-size: 11pt">https://www.balena.io/etcher/</font></font></a></u></font><font face="Arial, serif"><font size="2" style="font-size: 11pt">
+ja valittavaksi tiedostoksi Etcher for Windows (x86|x64).  </font></font>
+</p>
+<p class="western" style="line-height: 100%; margin-left: 0cm; text-indent: 0cm; margin-bottom: 0cm">
+<br/>
+
+</p>
+<p class="western" style="line-height: 100%; margin-left: 0cm; text-indent: 0cm; margin-bottom: 0cm">
+<font face="Arial, serif"><font size="2" style="font-size: 11pt">Seuraavaksi
+laitoin muistitikun koneen USB-porttiin ja käynnistin Etcherin.
+Etcher oli helppo ohjelma käyttää:</font></font></p>
+<ol>
+	<li><p style="line-height: 100%; text-indent: 0cm; margin-bottom: 0cm">
+	<font face="Arial, serif"><font size="2" style="font-size: 11pt">Valitsin
+	ISO -tiedoston jonka olin ladannut aiemmin. </font></font>
+	</p>
+	<li><p style="line-height: 100%; text-indent: 0cm; margin-bottom: 0cm">
+	<font face="Arial, serif"><font size="2" style="font-size: 11pt">Valitsin
+	muistitikun jonka olin kiinnittänyt koneeseen aiemmin</font></font></p>
+	<li><p style="line-height: 100%; text-indent: 0cm; margin-bottom: 0cm">
+	<font face="Arial, serif"><font size="2" style="font-size: 11pt">Klikkasin
+	Flash! ja odotin, että ohjelma kertoi minulle tikun olevan valmis.</font></font></p>
+</ol>
+<p class="western" style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p class="western" style="line-height: 108%; margin-bottom: 0.28cm"><img src="H1a_html_608f16dc2a25c7bb.png" name="Picture 1" align="bottom" width="661" height="413" border="0"/>
+</p>
+<p class="western" style="line-height: 108%; margin-bottom: 0.28cm"><font face="Arial, serif"><font size="2" style="font-size: 11pt">Käynnistyslevy
+oli valmis minuuteissa, jonka jälkeen irrotin muistitikun
+tietokoneesta.</font></font></p>
+<p class="western" style="line-height: 108%; margin-bottom: 0.28cm"><br/>
+<br/>
+
+</p>
+<p class="western" style="line-height: 100%; margin-left: 0cm; text-indent: 0cm; margin-bottom: 0cm">
+<br/>
+
+</p>
+<p class="western" style="line-height: 100%; margin-bottom: 0cm; page-break-before: always">
+<font face="Arial, serif"><font size="2" style="font-size: 11pt"><b>Asennus</b></font></font></p>
+<p class="western" style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p class="western" style="line-height: 100%; margin-left: 0cm; text-indent: 0cm; margin-bottom: 0cm">
+<font face="Arial, serif"><font size="2" style="font-size: 11pt">Sammutin
+Huawei kannettavani ja laitoin juuri luomani käynnistyslevykkeen
+USB-porttiin. Käynnistin koneen. Linuxin asennusohjelman sijaan
+latautui vanha Windows. Käynnistin tietokoneen uudestaan ja menin
+tarkistamaan BIOSin asetukset. BIOSiin pääsin painamalla ESC
+näppäintä koneen käynnistyksen jälkeen. Näppäin vaihtelee eri
+tietokoneissa. </font></font>
+</p>
+<p class="western" style="line-height: 100%; margin-left: 0cm; text-indent: 0cm; margin-bottom: 0cm">
+<br/>
+
+</p>
+<p class="western" style="line-height: 100%; margin-left: 0cm; text-indent: 0cm; margin-bottom: 0cm">
+<font face="Arial, serif"><font size="2" style="font-size: 11pt">BIOSissa
+navigoin itseni nuolinäppäimiä käyttäen kohtaan Bootable device,
+jonka alla oli listattuna laitteet. Vaihdoin &lt;Enable&gt;
+muistitikkuni kohdalle ja muihin &lt;Disable&gt;. Seuraavaksi
+siirryin Security Setting alle ja vaihdoin Secure Boot &lt;Disable&gt;.
+Koneen käynnistyttyä uudestaan latautui myös Kali Linuxin
+asennustiedosto.</font></font></p>
+<p class="western" style="line-height: 100%; margin-left: 0cm; text-indent: 0cm; margin-bottom: 0cm">
+<br/>
+
+</p>
+<p class="western" style="line-height: 100%; margin-left: 0cm; text-indent: 0cm; margin-bottom: 0cm">
+<font face="Arial, serif"><font size="2" style="font-size: 11pt">Asennuksen
+eri vaiheissa noudatin
+</font></font><font color="#0563c1"><u><a href="https://www.kali.org/docs/installation/hard-disk-install/"><font face="Arial, serif"><font size="2" style="font-size: 11pt">https://www.kali.org/docs/installation/hard-disk-install/</font></font></a></u></font><font face="Arial, serif"><font size="2" style="font-size: 11pt">
+löytyviä ohjeita. Valitsin seuraavasti:</font></font></p>
+<p lang="en-US" class="western" style="line-height: 100%; margin-left: 0cm; text-indent: 0cm; margin-bottom: 0cm">
+<br/>
+
+</p>
+<ol>
+	<li><p style="line-height: 100%; text-indent: 0cm; margin-bottom: 0cm">
+	<font face="Arial, serif"><font size="2" style="font-size: 11pt"><span lang="en-US">Boot:
+	Graphical install</span></font></font></p>
+	<li><p style="line-height: 100%; text-indent: 0cm; margin-bottom: 0cm">
+	<font face="Arial, serif"><font size="2" style="font-size: 11pt"><span lang="en-US">Language:
+	English</span></font></font></p>
+	<li><p style="line-height: 100%; text-indent: 0cm; margin-bottom: 0cm">
+	<font face="Arial, serif"><font size="2" style="font-size: 11pt"><span lang="en-US">Location:
+	Fin</span></font></font></p>
+	<li><p style="line-height: 100%; text-indent: 0cm; margin-bottom: 0cm">
+	<font face="Arial, serif"><font size="2" style="font-size: 11pt"><span lang="en-US">Keyboard
+	layout: Finnish</span></font></font></p>
+	<li><p style="line-height: 100%; text-indent: 0cm; margin-bottom: 0cm">
+	<font face="Arial, serif"><font size="2" style="font-size: 11pt"><span lang="en-US">Hostname:
+	kali</span></font></font></p>
+	<li><p style="line-height: 100%; text-indent: 0cm; margin-bottom: 0cm">
+	<font face="Arial, serif"><font size="2" style="font-size: 11pt">Domain
+	name: jätin tämän tyhjäksi</font></font></p>
+	<li><p style="line-height: 100%; text-indent: 0cm; margin-bottom: 0cm">
+	<font face="Arial, serif"><font size="2" style="font-size: 11pt">Nimitiedot:
+	oma nimi, käyttäjänimi ja salasana</font></font></p>
+	<li><p style="line-height: 100%; text-indent: 0cm; margin-bottom: 0cm">
+	<font face="Arial, serif"><font size="2" style="font-size: 11pt">Kellon
+	asetukset</font></font></p>
+	<li><p style="line-height: 100%; text-indent: 0cm; margin-bottom: 0cm">
+	<font face="Arial, serif"><font size="2" style="font-size: 11pt"><span lang="en-US">Partition
+	disks: Guided – use entire disk and set up encrypted LVM</span></font></font></p>
+	<li><p style="line-height: 100%; text-indent: 0cm; margin-bottom: 0cm">
+	<font face="Arial, serif"><font size="2" style="font-size: 11pt">Partition
+	disks: valitsin tietotokoneeni kovalevyn</font></font></p>
+	<li><p style="line-height: 100%; text-indent: 0cm; margin-bottom: 0cm">
+	<font face="Arial, serif"><font size="2" style="font-size: 11pt"><span lang="en-US">Selected
+	for partitioning: all files in one partition (recommended for new
+	user)</span></font></font></p>
+	<li><p style="line-height: 100%; text-indent: 0cm; margin-bottom: 0cm">
+	<font face="Arial, serif"><font size="2" style="font-size: 11pt"><span lang="en-US">Finish
+	partitioning and write changes to disk</span></font></font></p>
+	<li><p style="line-height: 100%; text-indent: 0cm; margin-bottom: 0cm">
+	<font face="Arial, serif"><font size="2" style="font-size: 11pt"><span lang="en-US">Write
+	changes to disks?: Yes</span></font></font></p>
+	<li><p style="line-height: 100%; text-indent: 0cm; margin-bottom: 0cm">
+	<font face="Arial, serif"><font size="2" style="font-size: 11pt">Olin
+	valinnut kryptauksen joten tässä vaiheessa kysyttiin vielä
+	salasanaa</font></font></p>
+	<li><p style="line-height: 100%; text-indent: 0cm; margin-bottom: 0cm">
+	<font face="Arial, serif"><font size="2" style="font-size: 11pt"><span lang="en-US">Configure
+	the package manager, ”The proxy information should…”: jätin
+	tyhjäksi</span></font></font></p>
+	<li><p style="line-height: 100%; text-indent: 0cm; margin-bottom: 0cm">
+	<font face="Arial, serif"><font size="2" style="font-size: 11pt"><span lang="en-US">Software
+	selection: </span></font></font>
+	</p>
+</ol>
+<ul>
+	<li><p style="line-height: 100%; text-indent: 0cm; margin-bottom: 0cm">
+	<font face="Arial, serif"><font size="2" style="font-size: 11pt"><span lang="en-US">Xfce
+	(Kali’s default desktop environment)</span></font></font></p>
+	<li><p style="line-height: 100%; text-indent: 0cm; margin-bottom: 0cm">
+	<font face="Arial, serif"><font size="2" style="font-size: 11pt"><span lang="en-US">Collections
+	of tools [selecting this item has no effect]</span></font></font></p>
+	<li><p style="line-height: 100%; text-indent: 0cm; margin-bottom: 0cm">
+	…<font face="Arial, serif"><font size="2" style="font-size: 11pt"><span lang="en-US">top
+	– the 10 most popular tools</span></font></font></p>
+	<li><p style="line-height: 100%; text-indent: 0cm; margin-bottom: 0cm">
+	…<font face="Arial, serif"><font size="2" style="font-size: 11pt"><span lang="en-US">default
+	– recommended tools (available in the live systems)</span></font></font></p>
+</ul>
+<ol start="17">
+	<li><p style="line-height: 100%; text-indent: 0cm; margin-bottom: 0cm">
+	<font face="Arial, serif"><font size="2" style="font-size: 11pt">Install
+	GRUB boot loader: valitsin mikä oli oletuksena /dev/sda</font></font></p>
+	<li><p style="line-height: 100%; text-indent: 0cm; margin-bottom: 0cm">
+	<font face="Arial, serif"><font size="2" style="font-size: 11pt">VALMIS</font></font></p>
+</ol>
+<p class="western" style="line-height: 100%; margin-left: 0cm; text-indent: 0cm; margin-bottom: 0cm">
+<br/>
+
+</p>
+<p class="western" style="line-height: 100%; margin-left: 0cm; text-indent: 0cm; margin-bottom: 0cm">
+<font face="Arial, serif"><font size="2" style="font-size: 11pt"><b>Yhteenveto</b></font></font></p>
+<p class="western" style="line-height: 100%; margin-left: 0cm; text-indent: 0cm; margin-bottom: 0cm">
+<br/>
+
+</p>
+<p class="western" style="line-height: 100%; margin-left: 0cm; text-indent: 0cm; margin-bottom: 0cm">
+<font face="Arial, serif"><font size="2" style="font-size: 11pt">Asensin
+onnistuneesti Kali Linux käyttöjärjestelmän suoraan koneen
+rautaan. Työvaiheet olivat helppoja ja suoraviivaista, eikä
+ongelmia tullut vastaan. Asennuksen jälkeen pääsin kirjautumaan
+järjestelmään asennuksen yhteydessä luomillani tunnuksilla.</font></font></p>
+<p class="western" style="line-height: 100%; margin-left: 0cm; text-indent: 0cm; margin-bottom: 0cm">
+<br/>
+
+</p>
+<p class="western" style="line-height: 108%; margin-left: 0cm; text-indent: 0cm; margin-bottom: 0.28cm">
+<br/>
+<br/>
+
+</p>
+<p class="western" style="line-height: 100%; margin-left: 0cm; text-indent: 0cm; margin-bottom: 0cm">
+<br/>
+
+</p>
+</body>
+</html>

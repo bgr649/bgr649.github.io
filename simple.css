@@ -6,6 +6,8 @@ article {
     font-size: 11px;
     font-weight: bold;
     padding-bottom: 1rem;
+    background-color: grey;
+    opacity: 0.8;
 }
 
 footer {
@@ -15,7 +17,6 @@ footer {
     bottom: 0;
     width: 90%;
     height: 2rem;
-    padding: 10px;
     text-align: center;
     color: white;
 }

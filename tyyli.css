@@ -2,13 +2,11 @@ article {
     overflow-y: auto;
     overflow-x: hidden;
     position: absolute;
-    height: 60%;
     text-align: justify;
     width: 60%;
-    right: 20%;
-    left: 20%;
-    background-color: black;
-    background-color: #BDBDBD;
+    right: 10%;
+    left: 10%;
+    background-color: lightgrey;
     opacity: 0.8;
     font-size: 15px;
     padding: 7px;
@@ -25,7 +23,6 @@ footer {
     left: 5;
     right: 5;
     bottom: 0;
-    padding: 10px;
     text-align: center;
     color: white;
 }

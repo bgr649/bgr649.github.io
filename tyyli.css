@@ -2,8 +2,8 @@ article {
     overflow-y: auto;
     overflow-x: hidden;
     text-align: justify;
-    right: 10%;
-    left: 10%;
+    padding-right: 10%;
+    padding-left: 10%;
     background-color: lightgrey;
     font-size: 15px;
     color: black;

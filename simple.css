@@ -5,8 +5,11 @@ article {
     font-family: Arial;
     font-size: 11px;
     font-weight: bold;
+    padding-right: 1em;
+    padding-left: 1em;
     padding-bottom: 2.5em;
-    background-color: white;
+    background-color: lightgrey;
+    opacity: 0.8;
     
 }
 

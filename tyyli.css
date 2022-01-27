@@ -12,7 +12,7 @@ article {
 
 footer {
     overflow-x: hidden;
-    background-color: black;
+    background-color: #333;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -39,7 +39,7 @@ body {
 
 .navbar {
   overflow: hidden;
-  background-color: black;
+  background-color: #333;
 }
 
 .navbar a {

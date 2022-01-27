@@ -23,7 +23,7 @@ footer {
     width: 100%;
     height: 150px;
     margin-top: -150px;
-    text-align: absolute;
+    text-align: center;
     color: white;
     font-size: small;
 }

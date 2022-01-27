@@ -1,11 +1,7 @@
 article {
     overflow-y: auto;
     overflow-x: hidden;
-    position: fixed;
-    height: 90%;
     text-align: justify;
-    width: 90%;
-    box-sizing: content-box;
     font-family: Arial;
     font-size: 11px;
     font-weight: bold;

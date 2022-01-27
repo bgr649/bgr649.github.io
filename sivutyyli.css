@@ -4,6 +4,11 @@ article {
     font-family: Arial;
     overflow-y: auto;
     overflow-x: hidden;
+    position: absolute;
+    text-align: justify;
+    width: 60%;
+    right: 20%;
+    left: 20%;
     
 }
 

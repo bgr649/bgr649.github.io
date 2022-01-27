@@ -37,13 +37,10 @@ footer {
     section {
         width: 100%;
         height: auto;
-
-    }
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 100px;
-}
 }
 
 .navbar {

@@ -2,8 +2,6 @@ article {
     overflow-y: auto;
     overflow-x: hidden;
     text-align: justify;
-    position: relative;
-    top: 10%;
     right: 10%;
     left: 10%;
     background-color: lightgrey;

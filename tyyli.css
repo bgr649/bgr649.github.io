@@ -12,6 +12,7 @@ article {
 }
 
 footer {
+    overflow-x: hidden;
     background-color: black;
     position: relative;
     bottom: 0;

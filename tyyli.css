@@ -9,8 +9,6 @@ article {
     background-color: lightgrey;
     opacity: 0.8;
     font-size: 15px;
-    padding: 7px;
-    box-sizing: content-box;
     color: black;
     font-weight: bold;
 }

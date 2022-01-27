@@ -12,13 +12,14 @@ article {
 
 footer {
     background-color: black;
-    position: fixed;
+    position: relative;
     bottom: 0;
     left:5;
     right:5;
     width: 100%;
     text-align: center;
     color: white;
+    font-size: small;
 }
 
 /* Tämän löysin w3schoolsista, kun etsin miten tehdä ruutuun mukautuvat sivut, Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens, */

@@ -13,9 +13,9 @@ article {
 
 footer {
     background-color: black;
-    position: fixed;
+    position: absolute;
     width: 100%;
-    left: 0;
+    height: 2.5rem;
     bottom: 10;
     padding: 10px;
     text-align: center;

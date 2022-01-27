@@ -1,7 +1,7 @@
 article {
     overflow-y: auto;
     overflow-x: hidden;
-    position: absolute;
+    position: centre;
     height: 60%;
     text-align: justify;
     width: 90%;

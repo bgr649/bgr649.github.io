@@ -33,7 +33,7 @@
         <article>
           <h2>DoS attack - Signal jamming</h2>
           <h3>Introduction</h3>
-          <p>I used Huawei Matebook with AMD Ryzen 5 processor and Kali Linux 64-bit operating system installed in baremetal to attack my own router. Tool for jamming the signal I used Aircrack-ng, which is collection of tools for WiFi security (more info: <a href="https://www.aircrack-ng.org/">www.aircrack-ng.org</a>. Everything I did was done with sudo priviledges.</br></p> 
+          <p>I used Huawei Matebook with AMD Ryzen 5 processor and Kali Linux 64-bit operating system installed in baremetal to attack my own router. Tool for jamming the signal I used Aircrack-ng, which is collection of tools for WiFi security (more info: <a href="https://www.aircrack-ng.org/">www.aircrack-ng.org</a>.) Everything I did was done with sudo priviledges.</br></p> 
           <p>First step was to turn wireless NIC to monitor mode, so I could listen the signals around me. The interface needed to be turned off to be able to change the settings, to do so I did:</p>
           <ul>
           <li>Turn off the interface: ifconfig [interface] down</li>
@@ -51,7 +51,7 @@
           <img src="korjausjadeaut.png" alt="deauth">
           </br>
           <h3 class="clear">Summary</h3>
-          <p class="clear">I was able to jam my own WiFi network and disconnect most of my devices from the internet (not all). The whole process was quite easy to implement. However I had a difficulties with the channel settings, but changing it manually fixed the problem. Following devices in the same network which I couldn't disconnect from internet:</p>
+          <p class="clear">I was able to jam my own WiFi network and disconnect most of my devices from the internet. The whole process was quite easy to implement. However, I had difficulties with the channel settings, but changing it manually fixed the problem. Devices which I couldn't disconnect from internet:</p>
           <ul>
           <li>Acer Aspire Intel quad core processor with Windows 10 64-bit operating system</li>
           <li>Philips PUS9560 smart tv</li>

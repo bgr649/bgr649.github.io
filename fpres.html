@@ -40,24 +40,16 @@
           <li>Change the mode from managed to monitor: iwconfig [interface] mode monitor</li>
           <li>Turn back on: ifconfig [interface] up</li>
           </ul>
-          <p class="p">After setting the NIC to monitor mode, I killed all the processes that might interfere aircrack-ng; I gave a command airmon-ng check kill</p>
-          </article>
+          <p class="clear">After setting the NIC to monitor mode, I killed all the processes that might interfere the Aircrack-ng tools; I gave a command airmon-ng check kill:</p>
           <img src="checkkill.png" alt="check">
-          <article>
-          <p class="p">Now I was ready to scan the aroundings with command airmon-ng [interface]
-          </article
+          <p class="clear">Now I was ready to scan the aroundings with command airmon-ng [interface]
           <img src="monitor.png" alt="check">
-          <article
-          <p>and perform a deauthentication attack withcommand aireplay -0 0 -a [BSSID] [interface]</p>
-          <p>At first I kept receiving a message:</p>
-          </article>
+          <p class="clear">and perform a deauthentication attack withcommand aireplay -0 0 -a [BSSID] [interface]</p>
+          <p class="clear">At first I kept receiving a message:</p>
           <img src="problem.png" alt="problem">
-          <article>
-          <p>After changing the channel I was able to to the deathentication:</p>
-          </article
+          <p class="clear">After changing the channel I was able to to the deathentication:</p>
           <img src="korjausjadeaut.png" alt="deauth">
           </br>
-          <article>
           <h3>Conclusion</h3>
           <p>I was able to jam my own WiFi network and disconnect most of my devices from the internet (not all). The whole process was quite easy to implement. However I had a difficulties with the channel settings, but changing it manually fixed the problem.</p>
           <p>Following devices in the same network that I couldn't disconnect from internet:</p>

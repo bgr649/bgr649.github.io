@@ -33,19 +33,20 @@
         <article>
           <h2>DoS attack - Signal jamming</h2>
           <h3>Introduction</h3>
-          <p>I used Huawei Matebook with AMD Ryzen 5 processor and Kali Linux 64-bit operating system installed in baremetal. Tool for jamming the signal I used Aircrack-ng.</br></p>            
-           
-          <h3>Steps</h3>
-          <ul>
-            <li>1. I changed the wireless interface to monitor mode</li>
-            <li>2. I listened broadcast messages of APs that are near by me and chose the "victim" (my own device)</li>
-            <li>3. Implement a deauthentication attack.</li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-          <h3>Final words</h3>
-          <p> Wireless access points works in hafl-duplex mode and sends broadcast messages</p>
+          <p>I used Huawei Matebook with AMD Ryzen 5 processor and Kali Linux 64-bit operating system installed in baremetal to attack my own router. Tool for jamming the signal I used Aircrack-ng, which is collection of tools for WiFi security (more info: <a href="https://www.aircrack-ng.org/"></a> or from man page. Everything I did was done with sudo or root priviledges.</br></p> 
+          <p>First step was to turn wireless NIC to monitor mode, so I could listen the signals around me. The interface needed to be turned off to be able to change the settings, to do so I did:</p>
+          <li>Turn off the interface: ifconfig [interface] down</li>
+          <li>Change the mode from managed to monitor: iwconfig [interface] mode monitor</li>
+          <li>Turn back on: ifconfig [interface] up</li>
+          <p>kuva???</p>
+          <p>After setting the NIC to monitor mode, I killed all the processes that might interfere aircrack-ng; I gave a command airmon-ng check kill</p>
+          <p>Now I was ready to scan the aroundings with airmon-ng [interface] 
+          <p>(kuva)</p>
+          <p>and perform a deauthentication attack with aireplay -0 0 -a [BSSID] [interface]</p>
+          <p>kuva</p>
+          <h3>Conclusion</h3>
+          <p>I was able to jam my own WiFi network and disconnect most of my devices from the internet. The whole process was quite easy to implement. However I had a problem with the channel settings, but changing it manually fixed the problem. Another problem I faced was that I couldn't disconnect my tv or asus laptop from internet, I couldn't find reason why.</p> 
+          <p>Monitoring worked beacause WiFi sends broadcast messages to its aroundings that could be listened. APs works in half-duplex mode so with deauth attack I was able to jam the signal</p>
         </article>
         </br>
         </br>

@@ -33,19 +33,22 @@
         <article>
           <h2>DoS attack - Signal jamming</h2>
           <h3>Introduction</h3>
-          <p>I used Huawei Matebook with AMD Ryzen 5 processor and Kali Linux 64-bit operating system installed in baremetal to attack my own router. Tool for jamming the signal I used Aircrack-ng, which is collection of tools for WiFi security (more info: <a href="https://www.aircrack-ng.org/">www.aircrack-ng.org</a> or from man page. Everything I did was done with sudo or root priviledges.</br></p> 
+          <p>I used Huawei Matebook with AMD Ryzen 5 processor and Kali Linux 64-bit operating system installed in baremetal to attack my own router. Tool for jamming the signal I used Aircrack-ng, which is collection of tools for WiFi security (more info: <a href="https://www.aircrack-ng.org/">www.aircrack-ng.org</a>. Everything I did was done with sudo priviledges.</br></p> 
           <p>First step was to turn wireless NIC to monitor mode, so I could listen the signals around me. The interface needed to be turned off to be able to change the settings, to do so I did:</p>
           <ul>
           <li>Turn off the interface: ifconfig [interface] down</li>
           <li>Change the mode from managed to monitor: iwconfig [interface] mode monitor</li>
           <li>Turn back on: ifconfig [interface] up</li>
           </ul>
-          <p>kuva???</p>
+          <img src="checkkill.png" alt="check">
           <p>After setting the NIC to monitor mode, I killed all the processes that might interfere aircrack-ng; I gave a command airmon-ng check kill</p>
           <p>Now I was ready to scan the aroundings with command airmon-ng [interface] 
-          <p>(kuva)</p>
+          <img src="monitor.png" alt="monitor">
           <p>and perform a deauthentication attack withcommand aireplay -0 0 -a [BSSID] [interface]</p>
-          <p>kuva</p>
+          <p>At first I kept receiving a message:</p>
+          <img src="problem.png" alt ="problem">
+          <p>After changing the channel I was able to to the deathentication:<p>
+          <img src="korjausjadeauth.png" alt="deauth">
           <h3>Conclusion</h3>
           <p>I was able to jam my own WiFi network and disconnect most of my devices from the internet (not all). The whole process was quite easy to implement. However I had a difficulties with the channel settings, but changing it manually fixed the problem.</p>
           <p>Following devices in the same network that I couldn't disconnect from internet:</p>

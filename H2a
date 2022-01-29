@@ -1,13 +1,13 @@
-<h3>/</h3>
+<h3 class="clear">/</h3>
 <p class="clear">Tämä on hakemistorakenteen ensimmäinen kansio ns juurihakemisto (root). Muu hakemisto rakentuu tämän päälle.</p>
 <img src="H2a.png" alt="root">
-<h3>/home/</h3>
+<h3 class="clear">/home/</h3>
 <p class="clear">Täältä näkee käyttäjien kotikansiot</p>
 <img src="home.png" alt="users">
-<h3>/home/niko</h3>
+<h3 class="clear">/home/niko</h3>
 <p class="clear">Tämä on käyttäjän kotihakemisto. Tänne säilötään käyttäjän omat tiedostot, sekä käyttäjäkohtaiset asetustiedostot.</p>
 <img src="H2a1.png" alt="home">
-<h3>/etc/</h3>
+<h3 class="clear">/etc/</h3>
 <p class="clear">Tästä kansiosta löytyy järjestelmän asetustiedostot. Esimerkiksi <strong>crontab</strong>, jossa voidaan luoda ajastettuja tehtäviä. Tiedostoon pääsee sisään komennolla crontab -e, jossa e = edit</p>
 <img src="cron1.png" alt="cron">
 <img scr="cron2.png" alt="cron1">

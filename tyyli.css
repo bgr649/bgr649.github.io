@@ -25,6 +25,7 @@ footer {
 }
 img {
     float: left;
+    padding: 5px;
 }
 p{
     clear: left;

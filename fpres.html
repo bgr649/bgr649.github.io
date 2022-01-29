@@ -40,8 +40,8 @@
           <li>Change the mode from managed to monitor: iwconfig [interface] mode monitor</li>
           <li>Turn back on: ifconfig [interface] up</li>
           </ul>
-          <img src="checkkill.png" alt="check">
           <p>After setting the NIC to monitor mode, I killed all the processes that might interfere aircrack-ng; I gave a command airmon-ng check kill</p>
+          <img src="checkkill.png" alt="check">
           <p>Now I was ready to scan the aroundings with command airmon-ng [interface] 
           <img src="monitor.png" alt="monitor">
           <p>and perform a deauthentication attack withcommand aireplay -0 0 -a [BSSID] [interface]</p>

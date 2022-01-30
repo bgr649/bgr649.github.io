@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--sivun otsikko, tämä näkyy "open tab"-->
+        <title>@NikoNyman</title>
+        <!--näppäin asetukset-->
+        <meta charset="utf-8">
+        <!--tekee sivusta mukautuvan-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--css linkitys-->
+        <link rel="stylesheet" type="text/css" href="tyyli.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="index.html">Etusivu</a>
+            <div class="dropdown">
+                <button class="dropbtn">Linux palvelimet</button>
+                <div class="dropdown-content">
+                    <a href="H1.html">H1</a>
+                    <a href="H2.html">H2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Pentest</button>
+                <div class="dropdown-content">
+                    <a href="###">Link 1</a>                   
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+        </div>
+        <article>
+            <<h3>grep -komento</h3>
+            <p>grep -komento etsii sille syötetyt parametrit tiedostosta.</p>
+            <h3 class="clear">Esimerkkejä</h3>
+            <img src="grep1.png" alt="grep1">
+            <p class="clear">Ylläoleva komento etsii "niko" sanaa /etc/passwd -tiedostosta (lisäämällä -i saadaan hausta "case sensitive")</p>
+            <img src="grep2.png" alt="grep2">
+            <p class="clear">Tässä tarkastellaan tiedostoa /etc/passwd, jonka jälkeen | grep -i ko, jolloin saadaan passwd tiedostosta "ko" sisältävät rivit.</p>
+            <img ssrc="grepR" alt="grepr">
+            <p class="clear">grep -R komennolla ohjelma käy rekursiivisesti kansiot läpi ja etsii annettua syötettä.</p>
+        </br>
+        </br>
+        </article>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        <footer>
+            <p>
+                <small>@ Niko Nyman, 2022</small>
+            </p>
+        </footer>
+    </body>
+</html>

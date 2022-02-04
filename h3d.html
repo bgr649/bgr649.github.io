@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--sivun otsikko, tämä näkyy "open tab"-->
+        <title>@NikoNyman</title>
+        <!--näppäin asetukset-->
+        <meta charset="utf-8">
+        <!--tekee sivusta mukautuvan-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--css linkitys-->
+        <link rel="stylesheet" type="text/css" href="tyyli.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="index.html">Etusivu</a>
+            <div class="dropdown">
+                <button class="dropbtn">Linux palvelimet</button>
+                <div class="dropdown-content">
+                    <a href="H1.html">H1</a>
+                    <a href="H2.html">H2</a>
+                    <a href="H3.html">H3</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Pentest</button>
+                <div class="dropdown-content">
+                    <a href="###">Link 1</a>                   
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+        </div>
+        <article>
+            <h3 class="clear">Apache lokimerkinnät</h3>
+            <img src="h3dlog.png" alt="loki">
+            <p class="clear">*Ensimmäinen rivi kuvasta</p>
+            <ul>
+            <li>::1 							loopback osoite</li>
+            <li>- - 							jotain tietoa puuttuu (???)</li>
+            <li>[04/Feb/2022:12:03:45 +0200] 	Pvm, kellonaika ja aikavyöhyke</li>
+            <li>"GET /~niko/ HTTP/1.1" 			metodi - lähde - protokolla - </li>
+            <li>200 765							Status "ok" / 765 (???)</li>
+            <li>Mozilla/5.0 					Mozilla yhteensopiva selain</li>
+            <li>X11; Linux x86_64				Järjestelmä minkä päällä  selain pyörii</li>
+            <li>AppleWebKit/537.36				UlkoasuaXXX ja versionumero</li>
+            <li>(KHTML, like Gecko) 
+            Chrome/97.0.4692.99 Safari/537.36"	Tästä voi päätellä että käytössä on Chrome tai Chromium selain</li>
+            <li></li>
+            </ul>
+        </br>
+        </br>
+        </article>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        <footer>
+            <p>
+                <small>@ Niko Nyman, 2022</small>
+            </p>
+        </footer>
+    </body>
+</html>

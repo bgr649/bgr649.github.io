@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--sivun otsikko, tämä näkyy "open tab"-->
+        <title>@NikoNyman</title>
+        <!--näppäin asetukset-->
+        <meta charset="utf-8">
+        <!--tekee sivusta mukautuvan-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--css linkitys-->
+        <link rel="stylesheet" type="text/css" href="tyyli.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="index.html">Etusivu</a>
+            <div class="dropdown">
+                <button class="dropbtn">Linux palvelimet</button>
+                <div class="dropdown-content">
+                    <a href="H1.html">H1</a>
+                    <a href="H2.html">H2</a>
+                    <a href="H3.html">H3</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Pentest</button>
+                <div class="dropdown-content">
+                    <a href="###">Link 1</a>                   
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+        </div>
+        <article>
+            <h2>H3a</h2>
+            <p class="clear">Asensin Apachen komennolla sudo apt-get install apache2, asennus hoitui sekunneissa. Tarkistin mitkä palvlut ovat päällä komennolla service --status-all; Apache2 edessä miinus merkki joka indikoi ettei ohjelma ole suoritustilassa.</p> 
+            <img src="H3aserv.png" alt="status">
+            <p class="clear">Käynnistin pavelun komennolla sudo service apace2 start jonka jälkeen service -status-all näytti + merkkiä apachen kohdalla.</p>
+            <img src="H3aservplus.png" alt="statusok">
+            <p class="clear">Selaimen osoiteriville kirjoitin localhost, jonka äjlkeen sivulle latautui Apachen "default page"</p>
+            <img src="H3adefault.png" alt="default">
+        </br>
+        </br>
+        </article>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        <footer>
+            <p>
+                <small>@ Niko Nyman, 2022</small>
+            </p>
+        </footer>
+    </body>
+</html>

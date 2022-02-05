@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--sivun otsikko, tämä näkyy "open tab"-->
+        <title>@NikoNyman</title>
+        <!--näppäin asetukset-->
+        <meta charset="utf-8">
+        <!--tekee sivusta mukautuvan-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--css linkitys-->
+        <link rel="stylesheet" type="text/css" href="tyyli.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="index.html">Etusivu</a>
+            <div class="dropdown">
+                <button class="dropbtn">Linux palvelimet</button>
+                <div class="dropdown-content">
+                    <a href="H1.html">H1</a>
+                    <a href="H2.html">H2</a>
+                    <a href="H3.html">H3</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Pentest</button>
+                <div class="dropdown-content">
+                    <a href="###">Link 1</a>                   
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+        </div>
+        <article>
+            <h2>H2e</h2>
+            <H3>Default pagen muuttaminen</h3>
+            <p class="clear">Tehävänäni oli vaihtaa Apachen default page toiseen.Lähtötilanne näytti seuraavalta:</p>
+            <img src="h3edefault.png" alt="default">
+            <p class="clear">Tallensin alkuperäisen indexi.html uudelleen ja nimesin sen alkupindex.html komennolla mv index.html alkupindx.html.</p>
+            <img src="h3ealkupindx.png">
+            <p class="clear">Tämän jälkeen loin uuden index.html tiedoston microlla ja käynnistin Apache2 palvelun uudestaan komennolla service apache2 restart</p>
+            <img src="h3erestart.png" alt="restart">
+            <p class="clear">Uudelleen käynnistyksen jälkeen default page näytti tältä:</p>
+            <img src="h3euusindx.png" alt="newindx">
+        </br>
+        </br>
+        </article>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        <footer>
+            <p>
+                <small>@ Niko Nyman, 2022</small>
+            </p>
+        </footer>
+    </body>
+</html>

@@ -33,11 +33,13 @@
         <article>
             <h2>H3f</h2>
             <h3>Virheen luominen .conf + loki</h3>
-            <p class="clear">Ensimmäiseksi etsin apache2.conf tiedoston</p>
-            <img src="h3fout.png" alt="outcomment">
-            <p class="clear">Ulos kommentoin rivin XXXXX ja uudelleen käynnistin Apache2, jonka jälkeen sain luotua XXXXX lokiin seuraavan virheilmoituksen:</p>
-            <img src="h3ferror.png" alt="error">
-            <p class="clear">Ilmoituksen analyysi</p>
+            <p class="clear">Ensimmäiseksi etsin apache2.conf tiedoston. Ulos kommentoin rivin 150 "include ports.conf" ja uudelleen käynnistin Apache2 komennolla service apache2 restart.</p>
+            <img src="h3foutcomment.png" alt="outcomment">
+            <p class="clear">Tiedosto ports.conf näytti tältä:</p>
+            <img src="h3fporsconf.png" alt="portstconf">
+            <p class="clear">Tekemieni muutsten jälkeen syslogiin ilmestyi seuraava virheilmoituksen:</p>
+            <img src="h3fsyslog.png" alt="error">
+            <p class="clear">Ilmoituksen analyysi. Kävin myös katsomassa apachen error.log tiedoston, mutta siellä ei ollut mitään syslog kellonaikaan sopivaa virhettä.</p>
         </br>
         </br>
         </article>

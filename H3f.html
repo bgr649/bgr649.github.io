@@ -34,12 +34,14 @@
             <h2>H3f</h2>
             <h3>Virheen luominen .conf + loki</h3>
             <p>Tehtävänä oli tehdä muutoksia apachen konfiguraatiotiedostoon niin että muutos aiheuttaa virheen ohjelman toiminnassa. Päätin tehdä muutoksen apache2.conf tiedostoon. Aloitin tehtävän kopioimalla alkuperäisen .conf tiedoston komennolla sudo cp [kopioitava_tiedosto] [uuden_tiedoston_nimi].</p>
-            <p class="clear">Tämän jälkeen etsin apache2.conf tiedostosta rivin jonka halusin muuttaa; ulos kommentoin rivin 150 "include ports.conf", jonka jälkeen uudelleen käynnistin Apache2 komennolla service apache2 restart.</p>
+            <p class="clear">Tämän jälkeen etsin apache2.conf tiedostosta rivin jonka halusin muuttaa; ulos kommentoin rivin 150 "include ports.conf".</p>
             <img src="h3foutcomment.png" alt="outcomment">
-            <p class="clear">Tiedosto ports.conf  näytti tältä:</p>
+            <p class="clear">Tiedostoss ports.conf määritellään mitä portteja kuunnellaan. Tiedosto näytti tältä:</p>
             <img src="h3fportsconf.png" alt="portstconf">
-            <p class="clear">Tekemieni muutsten jälkeen syslogiin ilmestyi seuraava virheilmoituksen:</p>
-            <img src="h3fsyslog.png" alt="error">
+            <p class="clear">Käynnistin apache2 uudestaan komennolla systemctl restart apach2, jonka jälkeen sain virheilmoituksen:</p>
+            <img src="h3frestart.png" alt="restart">
+            <p class="clear">Katsoin /var/log/syslog merkinnät<.</>
+            <img src="h3fsyslogerror.png" alt="error">
             <p class="clear">Ilmoituksen analyysi. Kävin myös katsomassa apachen error.log tiedoston, mutta siellä ei ollut mitään syslog kellonaikaan sopivaa virhettä.</p>
         </br>
         </br>

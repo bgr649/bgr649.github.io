@@ -40,7 +40,9 @@
             <img src="h3fportsconf.png" alt="portstconf">
             <p class="clear">Käynnistin apache2 uudestaan komennolla systemctl restart apach2, jonka jälkeen sain virheilmoituksen:</p>
             <img src="h3frestart.png" alt="restart">
-            <p class="clear">Katsoin /var/log/syslog merkinnät<.</>
+            <p class="clear">Katsoin systemctl status apache2.service -tiedoston:</p>
+            <img src="h3fapacheservice.png" alt="sytem">
+            <p class="clear">Katsoin myös /var/log/syslog merkinnät<.</>
             <img src="h3fsyslogerror.png" alt="error">
             <p class="clear">Ilmoituksen analyysi. Kävin myös katsomassa apachen error.log tiedoston, mutta siellä ei ollut mitään syslog kellonaikaan sopivaa virhettä.</p>
         </br>

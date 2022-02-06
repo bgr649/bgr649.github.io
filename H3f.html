@@ -34,15 +34,16 @@
             <h2>H3f</h2>
             <h3>Virheen luominen .conf + loki</h3>
             <p>Tehtävänä oli tehdä muutoksia apachen konfiguraatiotiedostoon niin että muutos aiheuttaa virheen ohjelman toiminnassa. Päätin tehdä muutoksen apache2.conf tiedostoon. Aloitin tehtävän kopioimalla alkuperäisen .conf tiedoston komennolla sudo cp [kopioitava_tiedosto] [uuden_tiedoston_nimi].</p>
-            <p class="clear">Tämän jälkeen etsin apache2.conf tiedostosta rivin jonka halusin muuttaa; ulos kommentoin rivin 150 "include ports.conf".</p>
+            <p class="clear">Tämän jälkeen etsin apache2.conf tiedostosta rivin joka loisi mahdollisen virheen; "uloskommentoin" rivin 150 "include ports.conf".</p>
             <img src="h3foutcomment.png" alt="outcomment">
-            <p class="clear">Tiedostoss ports.conf määritellään mitä portteja kuunnellaan. Tiedosto näytti tältä:</p>
+            <p class="clear">Tiedostossa ports.conf määritellään mitä portteja kuunnellaan. Tiedosto näytti tältä:</p>
             <img src="h3fportsconf.png" alt="portstconf">
             <p class="clear">Käynnistin apache2 uudestaan komennolla systemctl restart apach2, jonka jälkeen sain virheilmoituksen:</p>
             <img src="h3frestart.png" alt="restart">
-            <p class="clear">Katsoin systemctl status apache2.service -tiedoston:</p>
+            <p class="clear">Annoin systemctl status apache2.service -komennon</p>
             <img src="h3fapacheservice.png" alt="sytem">
-            <p class="clear">Ilmoituksen analyysi. Kävin myös katsomsyslog kellonaikaan sopivaa virhettä.</p>
+            <h3 class="clear">"Failed to start The Apache HTTP Server"</h3>
+            <p class="clear">Muuttaessani "include ports.conf" -kohtaa apache2.conf -tiedostosta, poistin Apachen astuksista portin 80 kuuntelun; portin 80 kautta kulkee http liikenne. Vaihtamani asetus tuli voimaan, mutta aiheutti sen ettei Apache suostunut uudelleen käynnistymään niillä konfiguraatioilla. </p>
         </br>
         </br>
         </article>

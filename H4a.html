@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--sivun otsikko, tämä näkyy "open tab"-->
+        <title>@NikoNyman</title>
+        <!--näppäin asetukset-->
+        <meta charset="utf-8">
+        <!--tekee sivusta mukautuvan-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--css linkitys-->
+        <link rel="stylesheet" type="text/css" href="tyyli.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="index.html">Etusivu</a>
+            <div class="dropdown">
+                <button class="dropbtn">Linux palvelimet</button>
+                <div class="dropdown-content">
+                    <a href="H1.html">H1</a>
+                    <a href="H2.html">H2</a>
+                    <a href="H3.html">H3</a>
+                    <a href="H4.html">H4</a>
+                    <a href="#">H5</a>
+                    <a href="#">H6</a>
+                    <a href="#">H7</a>
+                    <a href="#">H8</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Pentest</button>
+                <div class="dropdown-content">
+                    <a href="###">Link 1</a>                   
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+        </div>
+        <article>
+            <h3>Domain name - namecheap.com</h3>
+            <p class="clear">Tehtävänäni oli varata domain nimi ja vuokrata palvelin. Domain nimen päätin ottaa Namecheapistä ja vapaana näytti olevan vielä nikonyman.net - lisäsin nimen ostoskoriin.<p>
+            <img src="H4namecheap.png" alt="domainname">
+            <img src="H4ostos.png" alt="ostoskori">
+            <p class="clear">Ostoskorissa en valinnut mitään lisäpalveluita, mutta annoin kohdan "Domain Privacy" jäädä enable tilaan. Lisäksi tarkistin ettei "Bulk Settings" alta löydy lisämaksuja.</p>
+            <img src="H4abulk.png" alt="bulk">
+            <p class="clear">Tämän jälkeen klikkasin "Confirm Order" -painitketta, jonka jälkeen minun tuli luoda tili Namecheapiin.</p>
+            <img src="H4aregister.png" alt="register">
+            <p class="clear">Klikkasin "Oder now" -painiketta, mutta sainkin virheilmoituksen.</p>
+            <img src="H4aerrormessage" alt="error">
+            <p class="clear">Vaikka rekisteröityminen näytti epäonnistuneen kokeilin kirjautua juuri luomillani tunnuksilla sisään ja yläätyksekseni rekisteröinti meni läpi. Lopuksi sain sähköpostiini koodin, jolla varmennettiin sähköpostiosoite. Kirjauduin sisään ja ja etsin ostoskorin uudetaan, jotta pääsin jatkamaan tilaustani. Account kohdassa täytettiin vielä tilauksen tekijän tietoja.</p>
+            <img src="H4aconti.png" alt="continue">
+            <p class="clear">Setup vaiheessa kysyttiin yhteystietoja - registrant, administrative, technical ja billing. Lisäksi sivulla mainittiin että ICANN vaatii rekisteröityjen domainien yhteystiedot whois databaseen - namecheapin ilmaisen palvelun tulisi kuitenkin piilottaa tiedot.</p>
+            <img src="H4awhois.png" alt="whois">
+            <img src="H4awhois2.png" alt="whois2">
+            <p class="clear">Billing vaiheessa täytin korttitiedot ja mahdollisesti auto reneval vaihtoehdot. Päätin uusia domainin vuosittain ja lisäsin reneval settings kohtaan palvelut jotka uusitaan.</p>
+            <img src="H4arenew111.png" alt="renewsettings">
+            <p class="clear">Order vaiheessa tarkistin maksutiedot ja hoidin maksun pois alta. Korttimaksu meni hämmentävän nopeasti läpi eikä mitää varmenteita tarvittu. Maksun jälkeen tilaus oli valmis ja navigoin itseni Domain List välilehteen. Ennen kuin jatkoin Namecheapin asetusten parissa, vuokrasin palvelimen. </p>
+            <h3>Palvelimen vuokraaminen - DigitalOcean</h3>
+            <p class="clear">Menin DigitalOcecanin sivuille ja täytin vaadittavat tiedot rekisteröitymistä varten. Tämän yhteydessä tuli laittaa korttitiedot ja tililtä tehtiin 1 USD katevaraus.Tämän jälkeen pavelua pystyi selaamaan.</p>
+            <img src="H4adigitaloce.png" alt="digital">
+            <p class="clear">Klikkasin "explore control panel" ja valitsin vasemmalta valikosta "Droplets"</p>
+            <img src="H4adroplet.png" alt="droplet">
+            <p class="clear">Klikkasin "Create droplet", jonka jälkeen avautui asetussivu.</p>
+            <p class="clear">Distribution - valitsin Debianin uusimman version (11)</p>
+            <img src="" alt>
+            <p class="clear">Choose a plan - valitsin Shared CPU(basic) ja CPU options kohdassa laitoin täpän Regular Intel with SSD.</p>
+            <img src="" alt>
+            <p class="clear">Choose a datacenter region - serverin sijainniksi valitsin datacenterin Amsterdamissa.</p>
+            <img src="" alt>
+            <p class="clear">Authentication - valitsin password vaihtoehdon (huom. vahva salasana!!!)</p>
+            <img src="" alt>
+            <p class="clear">Finalize - tässä vaiheessa vaihdoin hostnamen vähemmän tietoa sisältävään nimeen.</p>
+            <img src="" alt>
+            <p class="clear">Lopuksi klikkasin "Create Droplet"</p>
+            <p class="clear">Serverin vuokraus onnistui ja sain IP osoitteen. Seuraavaksi linkitin vuokraamani serverin IP osoitteen tilaamani domain namen alle nikonyman.net. Siirryin namecheap sivulla "advanced dns" -välilehdelle.</p>
+            <img src="H4aadvanced.png" alt="advance">
+            <p class="clear"> Tunnilla annettujen ohjeiden mukaan lisäsin 2 kappaletta A recordeja (www ja @) value kohtaan laitoin vuokraamani serverin ip osoitteen ja TTL määritin 5min. Painoin save changes, jonka jälkeen luomani recordid korvasivat oletuksena olleet.</p>
+            <img src="" alt="">
+            <p class="clear">Lopuksi tarkistin vielä onnistuuko kirjautuminen palvelimelle:</p>
+            <img src="" alt="">
+        </br>
+        </br>
+        </article>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        <footer>
+            <p>
+                <small>@ Niko Nyman, 2022</small>
+            </p>
+        </footer>
+    </body>
+</html>

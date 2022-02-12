@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--sivun otsikko, tämä näkyy "open tab"-->
+        <title>@NikoNyman</title>
+        <!--näppäin asetukset-->
+        <meta charset="utf-8">
+        <!--tekee sivusta mukautuvan-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--css linkitys-->
+        <link rel="stylesheet" type="text/css" href="tyyli.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="index.html">Etusivu</a>
+            <div class="dropdown">
+                <button class="dropbtn">Linux palvelimet</button>
+                <div class="dropdown-content">
+                    <a href="H1.html">H1</a>
+                    <a href="H2.html">H2</a>
+                    <a href="H3.html">H3</a>
+                    <a href="H4.html">H4</a>
+                    <a href="#">H5</a>
+                    <a href="#">H6</a>
+                    <a href="#">H7</a>
+                    <a href="#">H8</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Pentest</button>
+                <div class="dropdown-content">
+                    <a href="###">Link 1</a>                   
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+        </div>
+        <article>
+            <h3>Palomuuri, asetukset ja päivittäminen</h3>
+            <p class="clear">Tehtävänäni oli asentaa vuokraamalleni serverille palomuuri, laittaa perus asetuksia kuntoon, asentaa Apache2, sekä ladata päivitykset</p>
+            <p class="clear">Aloitin asentamalla palomuurin komennolla apt-get install ufw. Jonka jälkeen tein "reiän" palomuuriin shh yhteydelle komennolla ufw allow 22/tcp.</p>
+            <img src="H4dufwallow.png" alt="allow">
+            <p class="clear">Tämän jälkeen annoin komennon ufw enable jonka jälkeen käynnistin järjestelmän uudestaan. Koneen uudelleen käynnistyttyä tarkistin pavelun tilan service --status-all komennolla - ufw kohdalla oli + merkki joten palvelu oli päällä.</p>
+            <img src="H4dufwenable.png" alt="enable">
+            <p class="clear">Seuraavaksi lisäsin käyttäjän sudo oikeuksilla, jotta minun ei tarvitsisi käyttää root tunnuksia kirjautuessani palvelimelle.</p>
+            <img src="H4dadduser+sudo.png" alt="user">
+            <p class="clear">Seuraavaksi kirjauduin ulos palvelimelta ja kirjauduin takaisin sisään juuri luomillani tunnuksilla. Seuraavaksi päivitin pakettilista sudo apt update, jonka jälkeen asensin päivitykset komennolla sudo apt dist-upgrade. Seuraavaksi asensin Apache2 weppipalvelimen komennolla sudo apt-get install apache2, sekä käynnistin palvelun komennolla sudo systemctl start apache2.</p>
+            <p class="clear">Korvasin oletussivun muokkaamalla index.html tiedostoa sijainnista /var/www/html/. Seuraavaksi tein lisäämälleni käyttäjälle (niko) public_html kansion sijaintiin /home/niko, sekä loin index.html tiedoston kansion sisään.</p>
+            <p>Kokeilin sivuja, mutta ne eivät toimineet. Muistin että minun tulisi myös avata userdir moduuli ja  tein sen komennolla sudo a2enable userdir. Käynnistin apachen uudestaan sudo systemctl restart apache2, mutta sivut eivät toimineet vieläkään - selain vain näytti raksuttavan muttei antanut mitään virheilmoituksia, sivun lataus tuntui kestävän.</p>
+            <p class="clear">Ihmettelin miksi sivut eivät lataudu kunnes muistin etten ollut avannut "reikää" Apachelle. Tämä korjautui komennolla sudo ufw allow 80/tcp. Tämän jälkeen sivut lähtivät toimimaan.</p>
+            <img src="H4donnistunut.png" alt="onnistui">
+            <img src="H4dnikosivu.png" alt="niko"
+        </br>
+        </br>
+        </article>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        <footer>
+            <p>
+                <small>@ Niko Nyman, 2022</small>
+            </p>
+        </footer>
+    </body>
+</html>

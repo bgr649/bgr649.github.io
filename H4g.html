@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--sivun otsikko, tämä näkyy "open tab"-->
+        <title>@NikoNyman</title>
+        <!--näppäin asetukset-->
+        <meta charset="utf-8">
+        <!--tekee sivusta mukautuvan-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--css linkitys-->
+        <link rel="stylesheet" type="text/css" href="tyyli.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="index.html">Etusivu</a>
+            <div class="dropdown">
+                <button class="dropbtn">Linux palvelimet</button>
+                <div class="dropdown-content">
+                    <a href="H1.html">H1</a>
+                    <a href="H2.html">H2</a>
+                    <a href="H3.html">H3</a>
+                    <a href="H4.html">H4</a>
+                    <a href="#">H5</a>
+                    <a href="#">H6</a>
+                    <a href="#">H7</a>
+                    <a href="#">H8</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Pentest</button>
+                <div class="dropdown-content">
+                    <a href="###">Link 1</a>                   
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+        </div>
+        <article>
+          <h3>Rosvot porteilla</h3>
+          <p class="clear">Tehtävänä oli tarkastella palvelimen lokitiedostoja ja etsiä merkkejä tunkeutumisyrityksistä ja analysoida niitä. Tarkastelin /var/log/auth.log tiedostoa ja huomasin, että palvelimelleni on yritetty murtautua lähes joka sekuntti siitä asti kun sain sen toimintaan. Kuvakaappauksessa pieni pätkä lokista:</p>
+          <img src="H4gauthlog.png">
+          <p class="clear">Koska kirjautumisyrityksiä oli niin monta ja tasaiseen tahtiin, uskon, että käynnissä oli (on), jonkin sortin brute force ja dictionary -hyökkäys, jonka tavoitteena oli päästä palvelimelle. Esimerkiksi kuvakaappauksen viimeisellä rivillä näkee miten IP osoitteesta 111.67.199.230 porttiin 42576 on yritetty ottaa ssh yhteys käyttäjänimellä jenkins.<p>
+          <h4>Yhteenveto</h4>
+          <p>Lokia tarkastellessani minulle vahvistui käsitys siitä miksi minimi määrä tietoa kohteesta ja vahva salasana ovat tärkeitä.</p>
+          <ul>
+          <li>Vahva salasana: bruteforce hyökkäyksessä ohjelma kokeilee kaiken mahdollisen annettujen parametrien mukaan. Esimerkiksi 4 numeroinen PIN koodi murtuisi sekunneissa.</li>
+          <li>Minimi määrä tietoa: internetistä löytyy kymmenien gigatavujen tekstitiedostoja sanakirjahyökkäyksiä varten. Pelkästään se, että paljastaa palvelimen nimessä mistä maasta ylläpitäjä on kotoisin, saattaa rajata tekniikoita tai lyhentää murtautumiseen käytettävää aikaa - tietyn maalaiset käyttäjänimet, salasanana käytetyt sanat.<li>
+          </ul>
+        </br>
+        </br>
+        </article>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        <footer>
+            <p>
+                <small>@ Niko Nyman, 2022</small>
+            </p>
+        </footer>
+    </body>
+</html>

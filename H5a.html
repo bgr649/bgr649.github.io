@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--sivun otsikko, tämä näkyy "open tab"-->
+        <title>@NikoNyman</title>
+        <!--näppäin asetukset-->
+        <meta charset="utf-8">
+        <!--tekee sivusta mukautuvan-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--css linkitys-->
+        <link rel="stylesheet" type="text/css" href="tyyli.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="index.html">Etusivu</a>
+            <div class="dropdown">
+                <button class="dropbtn">Linux palvelimet</button>
+                <div class="dropdown-content">
+                    <a href="H1.html">H1</a>
+                    <a href="H2.html">H2</a>
+                    <a href="H3.html">H3</a>
+                    <a href="H4.html">H4</a>
+                    <a href="#">H5</a>
+                    <a href="#">H6</a>
+                    <a href="#">H7</a>
+                    <a href="#">H8</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Pentest</button>
+                <div class="dropdown-content">
+                    <a href="###">Link 1</a>                   
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+        </div>
+        <article>
+            <h3>Djangon asentaminen palvelimelle</h3>
+            <p class="clear">Ensimmäiseksi päivitin metadatan komennolla sudo apt-get update ja vaihdoin apachen testisivun</p>
+            <img src="djangotestisivu.png" alt="index">
+            <p class="clear">Loin käyttäjällä weppisisältöä</p>
+            <img src="djangoweppisisalto.png" alt="weppi">
+            <p class="clear">Seraavaksi loin virtual hostin komennolla sudoedit /etc/apache2/sites-available/nikony.conf</p>
+            <img class="djangovirtualhost.png" alt="virtualhost">
+            <p class="clear">Ja otin luomani .conf tiedoston käyttöön ja poistin muut käytöstä</p>
+            <img src="djangoendis.png" alt="enadisa">
+            <p class="clear">Seuraavaksi tarkistin vielä konfiguraatiot:</p>
+            <img src="djangoconf.png" alt="conf">
+            <p class="clear">Syntaksi oli OK, jonka jälkeen uudelleen käynnistin Apachen sudo systemctl restart apache2</p>
+            <p class="clear">Seuraavaksi tarkistin onko minulla pääsy tiedostoihin curl http://localhost/static/</p>
+            <img src="djangocurl.png" alt="curl">
+            <p class="clear">Seuraavaksi asensin VirtualEnv ja loin virtuaaliympäristön:</p>
+            <img src="djangovirtual.png" alt="virtualenv">
+            <p class="clear">Käynnistin virtuaaliympäristön, asensin Djangon ja tarkistin onnistuiko asennus:</p>
+            <img src="djangoinstall.png" alt="djanginstall">
+            <p class="clear">Jostain syystä requirements.txt kautta ei löytynyt djangon verioita, joten tein asennuksen "manuaalisesti"</p>
+            <img src="djanginstallmanu.png alt="manu">
+            <p class="clear">Loin uuden projektin django-admin starproject nikony, jonka jälkeen menin muokkaamaan aiemmin luomaani .conf tiedostoa</p>
+            <img src="djangoconfig.png" alt="djconfig">
+            <p class="clear">Seuraavaksi asensin Apachen wsgi moduulin sudo apt-get -y install libapache2-mod-wsgi-py3, tarkistin konfiguraatiot /sbin/apache2ctl configtest, sekä käynnistin Apachen uudestaan sudo systemctl restart apache2. Syntaksi oli OK </p>
+            <p class="clear">Annoin pari eri curl komentoa ja ei ainakaan tullut virheilmoituksia, joten jatkoin seuraavaan vaiheeseen.</p>
+            <img src="djangocurl2.png" alt="curls">
+            <p class="clear">Poistin debuggauksen käytöstä ja lisäsin domainini allowed hosts kohtaan.</p>
+            <img src="djangosettings.png" alt="debug">
+            <p class="clear">"Kosketin" vielä wsgi.py tiedostoa touch nikony/wsgi.py ja käynnistin uudelleen Apachen, jotta asetukset tulisivat voimaan</p>
+            <p>Kun menin nikonyman.net, nikonyman.net/static tai localhost ei sivuihin ollut tullut muutoksia. En myöskään päässyt serverin puolelta firefoxiin - sain virheilmoituksen puuttuvasta DISPLAYsta. Tämä viittasi siihen ettei minulla ole siellä mitään graafista liittymää(?) Kokeilin ssh asetuksista X11 forward asetuksia, mutta en saanut juurikaan mitään aikaiseksi (enkä tiedä olisiko ne toimineetkaan). Error.logia katsoin, mutta en saanut mistään kiinni mikä olisi vialla. Tein myös migrate jutut ja muut. Lopuksi palasin kotikansioon ja annoin komennon rm -r publicwsgi, poistin/palautin .conf tiedostot niin kuin ne olivat.</p>
+            <img src="djangoerror.png" alt="error">
+            <p class="clear"></p>
+            <img src="djangormr.png" alt="rmr">
+            <p class="clear"> Käytin noin 20 tuntia ongelmani selvittämiseen tuloksetta - en siis saanut asennettua Djangoa palvelimelleni. Opin kuitenkin Teron kirjoittamat ohjeet lähes  ulkoa, sekä kehityin kansioiden välillä liikkumisessa.</p>
+
+        </br>
+        </br>
+        </article>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        <footer>
+            <p>
+                <small>@ Niko Nyman, 2022</small>
+            </p>
+        </footer>
+    </body>
+</html>

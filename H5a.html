@@ -41,12 +41,10 @@
             <img src="djangotestisivu.png" alt="index">
             <p class="clear">Loin käyttäjällä weppisisältöä</p>
             <img src="djangoweppisisalto.png" alt="weppi">
-            <p class="clear">Seraavaksi loin virtual hostin komennolla sudoedit /etc/apache2/sites-available/nikony.conf</p>
-            <img class="djangovirtualhost.png" alt="virtualhost">
-            <p class="clear">Ja otin luomani .conf tiedoston käyttöön ja poistin muut käytöstä</p>
-            <img src="djangoendis.png" alt="enadisa">
-            <p class="clear">Seuraavaksi tarkistin vielä konfiguraatiot:</p>
-            <img src="djangoconf.png" alt="conf">
+            <p class="clear">Seraavaksi loin virtual hostin komennolla sudoedit /etc/apache2/sites-available/newpro.conf</p>
+            <img class="sudoedit.png" alt="virtualhost">
+            <p class="clear">Ja otin luomani .conf tiedoston käyttöön ja poistin muut käytöstä a2ensite newpro.conf ja a2dissite komennoilla.</p>
+            <p class="clear">Seuraavaksi tarkistin vielä konfiguraatiot /sbin/apache2ctl configtest -komennolla</p>
             <p class="clear">Syntaksi oli OK, jonka jälkeen uudelleen käynnistin Apachen sudo systemctl restart apache2</p>
             <p class="clear">Seuraavaksi tarkistin onko minulla pääsy tiedostoihin curl http://localhost/static/</p>
             <img src="djangocurl.png" alt="curl">
@@ -54,10 +52,9 @@
             <img src="djangovirtual.png" alt="virtualenv">
             <p class="clear">Käynnistin virtuaaliympäristön, asensin Djangon ja tarkistin onnistuiko asennus:</p>
             <img src="djangoinstall.png" alt="djanginstall">
-            <p class="clear">Jostain syystä requirements.txt kautta ei löytynyt djangon verioita, joten tein asennuksen "manuaalisesti"</p>
-            <img src="djanginstallmanu.png alt="manu">
+            <p class="clear">Jostain syystä requirements.txt kautta ei löytynyt djangon verioita, joten tein asennuksen "manuaalisesti": pip install Django==4.0.3</p>
             <p class="clear">Loin uuden projektin django-admin starproject newpro, jonka jälkeen menin muokkaamaan aiemmin luomaani .conf tiedostoa</p>
-            <img src="djangoconfig.png" alt="djconfig">
+            <img src="djangoconf2.png" alt="djconfig">
             <p class="clear">Seuraavaksi asensin Apachen wsgi moduulin sudo apt-get -y install libapache2-mod-wsgi-py3, tarkistin konfiguraatiot /sbin/apache2ctl configtest, sekä käynnistin Apachen uudestaan sudo systemctl restart apache2. Syntaksi oli OK </p>
             <p class="clear">Annoin pari eri curl komentoa ja ei ainakaan tullut virheilmoituksia, joten jatkoin seuraavaan vaiheeseen.</p>
             <img src="djangocurl2.png" alt="curls">

@@ -56,20 +56,17 @@
             <img src="djangoinstall.png" alt="djanginstall">
             <p class="clear">Jostain syystä requirements.txt kautta ei löytynyt djangon verioita, joten tein asennuksen "manuaalisesti"</p>
             <img src="djanginstallmanu.png alt="manu">
-            <p class="clear">Loin uuden projektin django-admin starproject nikony, jonka jälkeen menin muokkaamaan aiemmin luomaani .conf tiedostoa</p>
+            <p class="clear">Loin uuden projektin django-admin starproject newpro, jonka jälkeen menin muokkaamaan aiemmin luomaani .conf tiedostoa</p>
             <img src="djangoconfig.png" alt="djconfig">
             <p class="clear">Seuraavaksi asensin Apachen wsgi moduulin sudo apt-get -y install libapache2-mod-wsgi-py3, tarkistin konfiguraatiot /sbin/apache2ctl configtest, sekä käynnistin Apachen uudestaan sudo systemctl restart apache2. Syntaksi oli OK </p>
             <p class="clear">Annoin pari eri curl komentoa ja ei ainakaan tullut virheilmoituksia, joten jatkoin seuraavaan vaiheeseen.</p>
             <img src="djangocurl2.png" alt="curls">
-            <p class="clear">Poistin debuggauksen käytöstä ja lisäsin domainini allowed hosts kohtaan.</p>
+            <p class="clear">Poistin debuggauksen käytöstä ja lisäsin nikonyman.net allowed hosts kohtaan.</p>
             <img src="djangosettings.png" alt="debug">
-            <p class="clear">"Kosketin" vielä wsgi.py tiedostoa touch nikony/wsgi.py ja käynnistin uudelleen Apachen, jotta asetukset tulisivat voimaan</p>
-            <p>Kun menin nikonyman.net, nikonyman.net/static tai localhost ei sivuihin ollut tullut muutoksia. En myöskään päässyt serverin puolelta firefoxiin - sain virheilmoituksen puuttuvasta DISPLAYsta. Tämä viittasi siihen ettei minulla ole siellä mitään graafista liittymää(?) Kokeilin ssh asetuksista X11 forward asetuksia, mutta en saanut juurikaan mitään aikaiseksi (enkä tiedä olisiko ne toimineetkaan). Error.logia katsoin, mutta en saanut mistään kiinni mikä olisi vialla. Tein myös migrate jutut ja muut. Lopuksi palasin kotikansioon ja annoin komennon rm -r publicwsgi, poistin/palautin .conf tiedostot niin kuin ne olivat.</p>
-            <img src="djangoerror.png" alt="error">
-            <p class="clear"></p>
-            <img src="djangormr.png" alt="rmr">
-            <p class="clear"> Käytin noin 20 tuntia ongelmani selvittämiseen tuloksetta - en siis saanut asennettua Djangoa palvelimelleni. Opin kuitenkin Teron kirjoittamat ohjeet lähes  ulkoa, sekä kehityin kansioiden välillä liikkumisessa.</p>
-
+            <p class="clear">"Kosketin" vielä wsgi.py tiedostoa touch newpro/wsgi.py ja käynnistin uudelleen Apachen, jotta asetukset tulisivat voimaan</p>
+            <h3 class="clear">Lopputulos</h3>
+            <p class="clear">Ymmärsin tehtävän niin, että tarkoitus olisi ollut saada djangon sivut näkymään vuokraamassani osoitteessa. Tässä en kuitenkaan onnistunut. En myöskään päässyt serverin kautta katsomaan localhost osoitetta "no DISPAY enviroment variable specified". Ongelmien ratkomiseen käytin kymmeniä tunteja, mutta päädyin aina tekemään samoja juttuja. Epäselväksi jäi myös oliko Djangon sivut tarkoitus saada näkymään nikonyman.net, nikonyman.net/admin, nikonymn.net/static/admin vai localhost:8000/admin osoitteessa.</p>
+            <p>Tarkistin tiedostojen oikeudet, tein /sbin/apache2ctl configtest, poistin projektin palautin alkuperäiset asetukset ja toistin tehtävän ohjeiden mukaan kymmeniä kertoja uudestaan samalla lopputuloksella. Error.logista en löytänyt mitään kummempaa, testiserveri lähti pyörimään normaalisti, tein migraatiot. Googlesta : django, django project, deploying django, file permissions, ssh display, xorg11, xauth. Lisäksi jäi mietityttämään curl -s locahhost|grep title -komento, joka ei antanut mitään tulosta. Tästä kaikesta päätellen en todennäköisesti ole ymmärtänyt tehtävänantoa oikein.</p> 
         </br>
         </br>
         </article>

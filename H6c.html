@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--sivun otsikko, tämä näkyy "open tab"-->
+        <title>@NikoNyman</title>
+        <!--näppäin asetukset-->
+        <meta charset="utf-8">
+        <!--tekee sivusta mukautuvan-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--css linkitys-->
+        <link rel="stylesheet" type="text/css" href="tyyli.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="index.html">Etusivu</a>
+            <div class="dropdown">
+                <button class="dropbtn">Linux palvelimet</button>
+                <div class="dropdown-content">
+                    <a href="H1.html">H1</a>
+                    <a href="H2.html">H2</a>
+                    <a href="H3.html">H3</a>
+                    <a href="H4.html">H4</a>
+                    <a href="H5.html">H5</a>
+                    <a href="H6.html">H6</a>
+                    <a href="#">H7</a>
+                    <a href="#">H8</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Pentest</button>
+                <div class="dropdown-content">
+                    <a href="###">Link 1</a>                   
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+        </div>
+        <article>
+            <h3>Uusi komento</h3>
+            <p>Tehtävänä oli luoda uusi komento Linuxiin joka tulostaa hyödyllistä tietoa</p>
+            <p>Tein komennon "kuka", joka tulostaa sijainnin, käyttäjän ja päivämäärän, sekä kellonajan.</p>
+            <p class="clear">Loin tiedoston "kuka" microlla - micro kuka. Tiedoston sisään kirjoitin haluamani komennot ja lisäsin tiedoston alkuun #!/usr/bin/bash</p>
+            <img src="kuka.png">
+            <p class="clear">Testasin toimiiko kuka -komento.</p>
+            <img src="toimiiko.png">
+            <p>Jotta komento toimisi muillakin käyttäjillä kuin omallani tuli tiedoston oikeuksia muuttaa niin että muutkin saavat execute oikeudet - chmod ugo+x kuka (change mod, user group other, x= execute [tiedoston nimi]). Lisäksi tiedosto tuli kopioida /usr/local/bin/ kansioon - cp kuka /usr/local/bin/</p>
+            <img src="kukalocal.png">
+            <p class="clear">Omaan silmään näytti pahalta tulostaa ensin sijainti ja sitten käyttäjä, joten kävin vielä muuttamassa /usr/local/bin/kuka niin, että käyttäjä tulostuu ensimmäiseksi. Jos olisin muuttanut /home/niko/kuka tiedostoa olisi muutos ollut vain käyttäjä kohtainen.</p>
+            <img src="vertailu.png">     
+        </br>
+        </br>
+        </article>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        <footer>
+            <p>
+                <small>@ Niko Nyman, 2022</small>
+            </p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--sivun otsikko, tämä näkyy "open tab"-->
+        <title>@NikoNyman</title>
+        <!--näppäin asetukset-->
+        <meta charset="utf-8">
+        <!--tekee sivusta mukautuvan-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--css linkitys-->
+        <link rel="stylesheet" type="text/css" href="tyyli.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="index.html">Etusivu</a>
+            <div class="dropdown">
+                <button class="dropbtn">Linux palvelimet</button>
+                <div class="dropdown-content">
+                    <a href="H1.html">H1</a>
+                    <a href="H2.html">H2</a>
+                    <a href="H3.html">H3</a>
+                    <a href="H4.html">H4</a>
+                    <a href="H5.html">H5</a>
+                    <a href="H6.html">H6</a>
+                    <a href="#">H7</a>
+                    <a href="#">H8</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Pentest</button>
+                <div class="dropdown-content">
+                    <a href="###">Link 1</a>                   
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+        </div>
+        <article>
+            <h3>VirtualBoxin ja Debian käyttöjärjestelmän asennus</h3>
+            <h4>Esivalmistelu</h4>
+            <p>Koneenani on Dell XPS 13 7390 ja käyttöjärjestelmänä Windows 10. Latasin VirtualBoxin uusimman asennustiedoston (6.1.32 for Windows host) osoitteesta <a href="www.virtualbox.org/Wiki/Downloads">VirtualBox</a></p>
+            <p>Käynnistin asennustiedoston ja klikkailin Next -painiketta. Custom setup kohdassa jätin täpätyksi Create shortcut ja Register file associations kohdat. Tämän jälkeen klikkailin Next -painiketta kunnes pääsin painamaan Install. VirtualBoxin asennustiedoston lataukseen ja asennukseen kului noin 2 minuuttia.</p>
+            <p class="clear">Seuraavaksi latasin Debianin ISO tiedoston osoitteesta <a href="https://cdimage.debian.org/images/unofficial/non-free/images-including-firmware/current-live/amd64/iso-hybrid/">Debian .ISO</a></p>
+            <img src="debis.png">
+            <p class="clear">Tiedoston lataus kesti noin 20 minuuttia 100M netillä. Todellinen nopeus näytti olevan speedtest.net mukaan vain viidennes luvatusta.</p>
+            <h4>Virtuaaliaseman luonti</h4>
+            <p class="clear>Käynnistin VirtualBoxin. Ylävalikosta menin kohtaa Machine – New. Klikkasin Expert mode ja laitoin alla näkyvät asetukset.</p>
+            <img src="create.png">
+            <p class="clear">Tämän jälkeen klikkasin Create -nappia.</p>
+            <p class="clear">Seuraavassa kohdassa jätin oletusasutekuset:</p>
+            <img src="default.png">
+            <p class="clear">Ja klikkasin vielä kerran Create. Virtuaaliaseman luonti onnistui:</p>
+            <img src="asema.png">
+            <h4 class="clear">ISO tiedoston lisääminen virtuaaliasemaan</h4>
+            <p>Klikkasin hiiren oikealla näppäimellä luomaani virtuaaliasemaa ja valitsin Settings. Navigoin itseni Storage valikkoon. Seuraavaksi klikkasin seuraavasti:</p>
+            <p class="clear">Storage Devices alta Controller IDE – Empty, jonka jälkeen ikkunana oikean laidan Attributes alta Optical Drive perästä levykuvaa (IDE Secondary device (tämä oli oletuksena)), jonka alta aukesi valikko. Klikkasin Choose/Create a Virtual Optical Disk:</p>
+            <img src="IDE.png">
+            <p class="clear">Seuraavaksi lisäsin lataamani ISO tiedoston virtuaalikoneeseen.</p>
+            <img class="lisatty.png">
+            <p class="clear">Klikkasin OK.</p>
+            <h4>Debianin asennus</h4>
+            <p class="clear">Tupla klikkasin luomaani virtuaaliasemaa jonka sisällä oli lataamani ISO tiedosto. Tästä aukesi ”Main Menu” ikkuna:</p>
+            <img src="main.png">
+            <p class="clear">Valitsin oletusvaihtoehdon painamalla Enter näpppäintä. Main Menu valikko muuttui mustaksi vajaan minuutin ajaksi jonka jälkeen jonka jälkeen aukesi Debianin työpöytä. Testasin vielä, että pääsen terminaaliin ja että minkä kielinen näppämistö oli oletuksena. Katsoin myös pääsenkö virtuaalikoneelta nettiin käynnistämällä selaimen ja lukaisemalla uutiset</p>
+            <img src="il.png">
+            <h4 class="clear">Yhteenveto</h4>
+            <p>Asensin VirtualBoxin ja Debian käyttöjärjestelmän onnistuneesti Windows koneelleni. Asennus sujui suoraviivaisesti eikä ongelmia tullut vastaan. Tukena asennuksessa käytin <a href="https://terokarvinen.com/2021/install-debian-on-virtualbox/?fromSearch=virtual">Tero Karvinen - Install Debian on VirtualBox</a> -ohjeita.</p>
+        </br>
+        </br>
+        </article>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        <footer>
+            <p>
+                <small>@ Niko Nyman, 2022</small>
+            </p>
+        </footer>
+    </body>
+</html>

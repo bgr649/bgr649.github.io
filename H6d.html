@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--sivun otsikko, tämä näkyy "open tab"-->
+        <title>@NikoNyman</title>
+        <!--näppäin asetukset-->
+        <meta charset="utf-8">
+        <!--tekee sivusta mukautuvan-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--css linkitys-->
+        <link rel="stylesheet" type="text/css" href="tyyli.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="index.html">Etusivu</a>
+            <div class="dropdown">
+                <button class="dropbtn">Linux palvelimet</button>
+                <div class="dropdown-content">
+                    <a href="H1.html">H1</a>
+                    <a href="H2.html">H2</a>
+                    <a href="H3.html">H3</a>
+                    <a href="H4.html">H4</a>
+                    <a href="H5.html">H5</a>
+                    <a href="H6.html">H6</a>
+                    <a href="#">H7</a>
+                    <a href="#">H8</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Pentest</button>
+                <div class="dropdown-content">
+                    <a href="###">Link 1</a>                   
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+        </div>
+        <article>
+          <h3>Skripti</h3>
+          <p class="clear">Kirjotin skriptin, joka kysyy käyttäjän nimeä ja tulostaa tervehdyksen kellonajan mukaan.</p>
+          <p class="clear">06-12 Hyvää huomenta, 12-18 Hyvää päivää, 18-23 Hyvää iltaa ja 23-06 Hyvää yötä.</p>
+          <img src="terve.png">
+          <p class="clear">Rivillä 1 kerron tietokoneelle että käytän python3</p>
+          <p>Rivillä 2 importtaan datetime kirjaston, josta saan päivämäärät ja kellonajat</p>
+          <p>Rivillä 4 kysyn nimeä ja rivillä 5 annan käyttäjälle vuoron vastata siihen</p>
+          <p>Rivillä 7 määritelen variablen paiva, joka saa arvokseen datetime kirjastosta haetun ajan</p>
+          <p>Tämän jälkeen määrittelen tunti sekä minuutti variablet ja kerron ohjelmalle, että haluan ne numero muodossa. Esimerkiksi pelkkä paiva.hour antaisi datetime objektin, jota ei voi verrata muihin arvoihin (esim. tunti <>= 4)</p>
+          <p>Rivillä 10 ja 11 sanon että jos minuutin arvo on alle 10 niin minuutin eteen lisätään 0 (4 --> 04). Näin kellon ajasta tulee kivemman näköinen</p>
+          <p>Koska käytin tunti variablea arvojen vertailuun (tekstiä ei voi verrata numeroihin), joten lisäsin if lauseen riveille 14 ja 26</p>
+          <p class="clear">Tulostus näytti tältä aamusta tältä:</p>
+          <img src="tulostus.png">
+          <p class="clear">Ja yöllä tältä:</p>
+          <img src="tulostus1.png"
+          <h3 class="clear">Yhteenveto</h3>
+          <p>Käytin datetime kirjastoa päivämäärän ja kellon ajan hakemiseen. Erotin tunnit ja minuutit ja muutin ne objekstista numero muotoon. Tämän jälkeen if lauseilla kerroin että jos kello on yli tai alle XX niin tulosta YY.</p>
+        </br>
+        </br>
+        </article>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        <footer>
+            <p>
+                <small>@ Niko Nyman, 2022</small>
+            </p>
+        </footer>
+    </body>
+</html>

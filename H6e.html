@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--sivun otsikko, tämä näkyy "open tab"-->
+        <title>@NikoNyman</title>
+        <!--näppäin asetukset-->
+        <meta charset="utf-8">
+        <!--tekee sivusta mukautuvan-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--css linkitys-->
+        <link rel="stylesheet" type="text/css" href="tyyli.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="index.html">Etusivu</a>
+            <div class="dropdown">
+                <button class="dropbtn">Linux palvelimet</button>
+                <div class="dropdown-content">
+                    <a href="H1.html">H1</a>
+                    <a href="H2.html">H2</a>
+                    <a href="H3.html">H3</a>
+                    <a href="H4.html">H4</a>
+                    <a href="H5.html">H5</a>
+                    <a href="H6.html">H6</a>
+                    <a href="#">H7</a>
+                    <a href="#">H8</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Pentest</button>
+                <div class="dropdown-content">
+                    <a href="###">Link 1</a>                   
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+        </div>
+        <article>
+            <h3>Arvioitava laboratorioharjoitus - KurssiKuru Oy (HARJOITUS)</p>
+            <p>Valitsin <a href="https://terokarvinen.com/2017/03/15/arvioitava-laboratorioharjoitus-linux-palvelimet-ict4tn021-3-uusi-ops-alkukevaalla-2017-p1/?fromSearch=arvioitava">Labra</a></p>
+            <p>Alkupräinen tehtävänanto tiivistettynä:</p>
+            <ul>
+            <li>Haluamme tehdä PHP-kotisivuja etäältä - Kurssilla olemme harjoitelleet Djangoa (python), joten korvasin PHPn Djangon asennuksella. Lisäksi toivottiin etähallintaa joten ssh tulee olla asennettuna.</li>
+            <li>Käyttäjäkohtaiset kotisivut (localhost/~[käyttäjänimi])</li>
+            <li>Anna yhdelle käyttäjälle (Maija) sudo - oikeudet</li>
+            <li>Luo yhdelle käyttäjällä (Jorma) sleep.example.com kotisivu</li>
+            <li>Luo metapaketti "kurssiguru-goding", joka sisältää git, ipyhton, meld ja gedit ohjelmat.</li>
+            </ul>
+            <h3>Aluksi</h3>
+            <p>Päivitin metadatan komennolla sudo apt-get update. Apache minulla oli jo asennettuna, mutta sen saisi komennolla sudo apt-get install apache2</p>
+            <p class="clear">Seuraavaksi muutin apache testisivun - echo "KurssiKuru" | sudo tee /var/www/html/index.html</p>
+            <img src="kurssikuru.png">
+            <p class="clear">Seuraavaksi loin käyttäjäkohtaiset testisivut käyttäjille:</p>
+            <li>Jorma Mäkkylä</li>
+            <li>Pekka Hurme</li>
+            <p class="clear">En ollut varma miten VirtualHost asetukset menevät joten loin kaksi ensimmäistä käyttäjää ja kokeilin miten virtualhost asetukset mahdollisestin menevät useamman käyttäjän kohdalla.</p>
+            <img src="pekka.png">
+            <p class="clear">Jotta ääkköset tulisivat näkyviin, pitää index.html tiedostoon lisätä merkkiasetukset</p>
+            <img src="jorma.png"
+            <p class="clear">Loin siis /home kansioon kurssikuru/kuru/[käyttäjänimi] komennolla sudo mkdir -p kurssikuru/kuru/Jorma_Mäkkylä/, sekä lisäsin index.html johon kirjoitin hieman HTML koodia. Index.html kopion käyttäjältä toiselle cp /tiedostopolku/index.html /tiedostopolku/index.html (Jormalta Pekalle). Jonka jälkeen kävin muokkaamassa virtualhost tiedostoa (kuru.conf)</p>
+            <img src="virtualhoust.png">
+            <p>Toistin saman muillekin käyttäjille.</p>
+            <li>Ronaldo Smith</li>
+            <li>Håkan Peterson</li>
+            <li>Einari Mikkonen</li>
+            <li>Einari Vähäkäähkä</li>
+            <li>Eija Vähäkäähkä</li>
+            <p class="clear">Tarkistin ls komennolla onko kaikissa tuo index.html. Kävin vielä muuttamassa käyttäjäkohtaisen index.html otsikot vastaamaan käyttäjää, sekä lisäsin <meta charset="utf-8"> rivin jotta ääköset näkyvät oikein.</p>
+            <img src="lskomento.png">
+            <p class="clear">Tarkistin vielä cat komenolla onko index.html oikein:</p>
+            <img src="catkomento.png">
+            <p class="clear">localhost/Håkan_Peterson</p>
+            <img src="hokan.png">
+            <p class="clear">Loin kaikille käyttäjille onnistuneesti localhost/[käyttäjänimi]/ testisivyn ja laitoin sivun otsikoksi käyttäjän nimen.</p>
+            <p>Asiakas halusin myös käyttää palvelinta etänä, joten asensin heille shh palvelun komennolla sudo apt-get install ssh. Nyt he voivat ottaa yhteyttä palvelimeen komennolla ssh [käyttäjänimi]@[pavelimen_ip_osoite]</p>
+            <p>Käyttäjät saadaan listättyä komennolla adduser [käyttäjänimi]. Tehtävässä Maija Virtanen jäi ylläpitäjäksi, joten hänelle tulee lisätä sudo oikeudet. Se onnistuu komennolla usermod -aG sudo [käyttäjänimi], joka tässä tapauksessa on Maija Virtanen.</p>
+            </br>
+            <h3>Djangon asennus</h3>
+            <p>Seuraavaksi asensin KurssiKuru Oylle Djangon, jonka avulla he voivat luoda itselleen haluamansa nettisivut. Loin Djangoon myös tunnukset kaikille käyttäjille.</p>
+            <p class="clear">Aloitin lataamalla virtualenvin, jotta tiedostot eivät menisi hujanhajan - sudo apt-get -y install virtualenv. Seuraavaksi latasin Djangon virtualeviin - käynnistin virtualenvin source env/bin/activate varmistin että olen oikeiassa directoryssa which pip komennolla.</p>
+            <img src="pip.png">
+            <p class="clear">Asensin Djangon komennolla pip intall Django==4.0.3</p>
+            <img src="djangoinstall.png">
+            <p class="clear">Seuraavaksi loin uuden projektin Djangoo komennolla sudo django-admin startproject kurssikuruoy. Jonka jälkeen siirryin muokkaamaan aiemmin luomaani .conf tiedostoa - sudoedit /etc/apache2/sites-available/kuru.conf</p>
+            <img ="confile.png">
+            <p class="clear">/sbin/apache2ctl configtest</p>
+            <img src="conftest.png">
+            <p class="clear">Eli .conf tiedoston $USER tulee olla se käyttäjä joka on (tässä tapauksessa olisi) kirjautuneena sisään.</p>
+            <p class="clear">Djangon näyttäisi asentuneen onnistuneesti ja asetuksetkin ovat ilmeisesti kunnossa.</p>
+            <img src="localdjango.png">
+            <p class="clear">Poistin vielä debuggauksen päältä ja lisäsin import os ja STATIC_ROOT = os.path.join(BASE_DIR, 'kuru/'). Tämän jälkeen annoin seurvaat komennot:</p>
+            <img src="komennot.png">
+            <p class="clear">Seuraavaksi annoin komennon sudo ./manage.py collectstatic</p>
+            <p>Asetukset olivat kunnossa niin loin vielä crm KurssiKuru Oylle. Lisäsin myös adminin nimellä Maija. Kirjautuessa sisään sain Server error 500, kävin laittamassa debugin päälle jotta saisin lisää tietoa asiasta.</p>
+            <img src="debugi.png">
+            <p class="clear">Tästä päättelin, että ongelma liittyy jotenkin permission tai ownershippiin. Palasin /home kansioon ja annoin komennon ls -la.</p>
+            <img src="lslapng">
+            <p class="clear">kurssikuru kansiolla on root omistaja. Muutin tämän komennolla sudo chown niko:niko kurssikuru</p>
+            <img="lsla2.png">
+            <p class="clear">Käynnistin vielä apache2 uudestaan ja kokeilin kirjautua localhost/admin. Server error 500 pysyi ja localhost kadotti Django etusivun. Olin aikeissa kokeilla tuleeko sivu takaisin vaihtamalla oikeudet rootiksi, mutta sitä ennen laitoin vielä debuggauksen päälle ja katsoin onko sanoma vaihtunut. Kävin koskettamassa wsgi.py ja restarttasin apachen niin localhostissa näkyi django etusivu taas. Errori oli edelleen kuitenkin sama, joten kävin katselemassa kurssikuru sisällä olevat kansiot myös.</p>
+            <img src="lsla3.png">
+            <p class="clear">Kaikki kansion kurssukuru sisällä oleva oli root:root oikeuksilla. Kokeilin muuttaa nekin komennolla sudo chown -R niko:niko</p>
+            <img src="lsla4.png">
+            <p class="clear">Oikeuksien muuton jälkeen kävin vielä koskettamassa settings tiedostoa ja käynnistin apachen uudestaan. Tämän jälkeen kävin kokeilemassa localhost/admin vielä kertaalleen.</p>
+            <img src="djadmin.png">
+            <p class="clear">Admin sivu lähti toimimaan! Tosin ulkoasu ei ole iha sitä mitä olin ajatellut (mahdollisesti virhe STATIC_ROOT = os.path.join(BASE_DIR, 'kuru/'). Kävin luomassa kuru/ kansioon static/index.html, kävin muuttamassa settings.py tiedostosta STATIC_ROOT -kohdan sekä kuru.conf tiedostoon lisäsin alias static/ [tiedostopolku]. Tämän jälkeen kosketin wsgi.py, annoin komennon ./manage.py collectstatic ja restarttasin apache2. Tämä ei kuitenkaan muuttanut tilannetta mihinkään suuntaan.</p>
+            </br>
+            <h3="clear">Yhteenveto</h3>
+           <p>Valitsin sellaisen tehtävän, joka olisi mahdollisimman lähellä mitä olimme kurssilla harjoitelleet. Onnistuin luomaan HTML testisivut 7 eri käyttäjälle. Onnistuin asentamaan Djangon (production install), luomaan crm appsin ja lisäämään siihen käyttäjät. Onnistuin troubleshoottaamaan Server 500 errorin ja kirjautumaan admin tunnuksilla sisään. Sivun tyyli jäi alkeelliseksi, mutta olipahan nopeampi. Jätin metapaketin tekemisen viimeiseksi ja oli tarkoitus harjoitella sekin, mutta aika loppui kesken. Loin linuxiin käyttäjiä, kansioita, muutin oikeuksia, käytin onnistuneesti ls, cp, mv -komentoja ja tulkitsin virheilmoituksia. Selvitin myös mikä minulla oli vikana parin viikon takaisessa H5 tehtävässä, jossa asennettiin Django vuokratulle palvelimelle (.conf tiedostossa virheellisesti VirtualHost x2). Tämä oli viimeinen harjoitus ennen loppukoetta. </p>
+           <p>Apuna tehtävässä käytin:</p>
+           <li>Komentojen man -pageja</li>
+           <li><a href="https://terokarvinen.com/2022/django-instant-crm-tutorial/?fromSearch=django">Tero Karvinen - Django 4 Instant Customer Database Tutorial</a></li>
+           <li><a href="https://terokarvinen.com/2022/deploy-django/?fromSearch=django">Tero Karvinen - Deploy Django 4 - Production Install</a></li>
+           <li>Tehtäviä joita olen tehnyt kurssilla Linux palvelimet ict4tn021-3018 <a href="https://bgr649.github.io/index.html"</li>
+        </br>
+        </br>
+        </article>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        <footer>
+            <p>
+                <small>@ Niko Nyman, 2022</small>
+            </p>
+        </footer>
+    </body>
+</html>

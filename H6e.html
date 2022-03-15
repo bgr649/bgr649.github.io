@@ -105,7 +105,7 @@
             <img src="djadmin.png">
             <p class="clear">Admin sivu lähti toimimaan! Tosin ulkoasu ei ole iha sitä mitä olin ajatellut (mahdollisesti virhe STATIC_ROOT = os.path.join(BASE_DIR, 'kuru/'). Kävin luomassa kuru/ kansioon static/index.html, kävin muuttamassa settings.py tiedostosta STATIC_ROOT -kohdan sekä kuru.conf tiedostoon lisäsin alias static/ [tiedostopolku]. Tämän jälkeen kosketin wsgi.py, annoin komennon ./manage.py collectstatic ja restarttasin apache2. Tämä ei kuitenkaan muuttanut tilannetta mihinkään suuntaan.</p>
             </br>
-            <h3="clear">Yhteenveto</h3>
+            <h3 class="clear">Yhteenveto</h3>
            <p>Valitsin sellaisen tehtävän, joka olisi mahdollisimman lähellä mitä olimme kurssilla harjoitelleet. Onnistuin luomaan HTML testisivut 7 eri käyttäjälle. Onnistuin asentamaan Djangon (production install), luomaan crm appsin ja lisäämään siihen käyttäjät. Onnistuin troubleshoottaamaan Server 500 errorin ja kirjautumaan admin tunnuksilla sisään. Sivun tyyli jäi alkeelliseksi, mutta olipahan nopeampi. Jätin metapaketin tekemisen viimeiseksi ja oli tarkoitus harjoitella sekin, mutta aika loppui kesken. Loin linuxiin käyttäjiä, kansioita, muutin oikeuksia, käytin onnistuneesti ls, cp, mv -komentoja ja tulkitsin virheilmoituksia. Selvitin myös mikä minulla oli vikana parin viikon takaisessa H5 tehtävässä, jossa asennettiin Django vuokratulle palvelimelle (.conf tiedostossa virheellisesti VirtualHost x2). Tämä oli viimeinen harjoitus ennen loppukoetta. </p>
            <p>Apuna tehtävässä käytin:</p>
            <li>Komentojen man -pageja</li>

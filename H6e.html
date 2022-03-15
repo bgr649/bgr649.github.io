@@ -59,7 +59,7 @@
             <img src="jorma.png"
             <p class="clear">Loin siis /home kansioon kurssikuru/kuru/[käyttäjänimi] komennolla sudo mkdir -p kurssikuru/kuru/Jorma_Mäkkylä/, sekä lisäsin index.html johon kirjoitin hieman HTML koodia. Index.html kopion käyttäjältä toiselle cp /tiedostopolku/index.html /tiedostopolku/index.html (Jormalta Pekalle). Jonka jälkeen kävin muokkaamassa virtualhost tiedostoa (kuru.conf)</p>
             <img src="virtualhoust.png">
-            <p>Toistin saman muillekin käyttäjille.</p>
+            <p class="clear">Toistin saman muillekin käyttäjille.</p>
             <li>Ronaldo Smith</li>
             <li>Håkan Peterson</li>
             <li>Einari Mikkonen</li>
@@ -94,7 +94,7 @@
             <p>Asetukset olivat kunnossa niin loin vielä crm KurssiKuru Oylle. Lisäsin myös adminin nimellä Maija. Kirjautuessa sisään sain Server error 500, kävin laittamassa debugin päälle jotta saisin lisää tietoa asiasta.</p>
             <img src="debugi.png">
             <p class="clear">Tästä päättelin, että ongelma liittyy jotenkin permission tai ownershippiin. Palasin /home kansioon ja annoin komennon ls -la.</p>
-            <img src="lslapng">
+            <img src="lsla.png">
             <p class="clear">kurssikuru kansiolla on root omistaja. Muutin tämän komennolla sudo chown niko:niko kurssikuru</p>
             <img="lsla2.png">
             <p class="clear">Käynnistin vielä apache2 uudestaan ja kokeilin kirjautua localhost/admin. Server error 500 pysyi ja localhost kadotti Django etusivun. Olin aikeissa kokeilla tuleeko sivu takaisin vaihtamalla oikeudet rootiksi, mutta sitä ennen laitoin vielä debuggauksen päälle ja katsoin onko sanoma vaihtunut. Kävin koskettamassa wsgi.py ja restarttasin apachen niin localhostissa näkyi django etusivu taas. Errori oli edelleen kuitenkin sama, joten kävin katselemassa kurssikuru sisällä olevat kansiot myös.</p>
@@ -111,7 +111,7 @@
            <li>Komentojen man -pageja</li>
            <li><a href="https://terokarvinen.com/2022/django-instant-crm-tutorial/?fromSearch=django">Tero Karvinen - Django 4 Instant Customer Database Tutorial</a></li>
            <li><a href="https://terokarvinen.com/2022/deploy-django/?fromSearch=django">Tero Karvinen - Deploy Django 4 - Production Install</a></li>
-           <li>Tehtäviä joita olen tehnyt kurssilla Linux palvelimet ict4tn021-3018 <a href="https://bgr649.github.io/index.html"</li>
+           <li>Tehtäviä joita olen tehnyt kurssilla Linux palvelimet ict4tn021-3018 <a href="https://bgr649.github.io/index.html">Linux palvelimet - Niko Nyman</a></li>
         </br>
         </br>
         </article>
